@@ -1,0 +1,37 @@
+
+
+#secondary{
+    background: url('https://images.unsplash.com/photo-1533670803344-afe2e89e5493?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8');
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size: cover;
+    height: 100%;
+}
+
+#sec-data{
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 20%;
+    height: 90vh;
+}
+
+#sec-data h1{
+    color: rgb(250, 188, 107);
+    font-size: xx-large;
+}
+
+button#sec-btn{
+    border: 1px solid black;
+    color: white;
+    transition: all 0.7s;
+    color: black;
+}
+
+
+button#sec-btn:hover{
+    background: black;
+    color: white;
+}

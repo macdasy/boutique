@@ -1,0 +1,27 @@
+
+
+
+#about-section{
+    padding: 5% 10%;
+}
+
+
+h4#about{
+    border-bottom: #ffbd60 0.8px solid;
+    display: inline-block;
+}
+
+p#group{
+    padding-bottom: 2%;
+}
+
+#about-btn{
+    background: #ffd79e;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: capitalize;
+    padding: 0.3% 3%;
+    transition: all 1s;
+}

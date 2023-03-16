@@ -1,0 +1,61 @@
+
+
+#customers-section{
+    padding: 12% 7%;
+
+    background: url('./bg.png');
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-position-x: left;
+    background-position-y: bottom;
+}
+
+h2#cust{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2#cust hr{
+    border-top: 2px solid #F8C145;
+    width: 20%;
+}
+
+.swipeCard{
+    padding: 5%;
+    background: transparent;
+}
+
+p.rating{
+    font-size: small;
+    color: #F8C145;
+}
+
+p.comment{
+    font-size: medium;
+}
+
+p.customer{
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

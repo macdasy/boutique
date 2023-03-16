@@ -1,0 +1,46 @@
+
+
+
+#collections-section{
+    padding: 1% 10% 5%;
+}
+
+
+h4#collections{
+    border-bottom: #ffbd60 0.8px solid;
+    display: inline-block;
+}
+
+p#group{
+    padding-bottom: 2%;
+}
+
+
+.col-img{
+    width: 100%;
+}
+
+.collct{
+    padding: 1%;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#collbtn{
+    border: 0.5px solid #ffd79e;
+    color: #ffd79e;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 0.3% 3%;
+    transition: all 1s;
+}
+
+#collbtn:hover{
+    background: #fadaae;
+    color: #ffb648;
+}
+

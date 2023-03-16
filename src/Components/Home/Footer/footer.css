@@ -1,0 +1,21 @@
+
+#footer{
+    padding: 7%;
+}
+
+h2#bottom-brand{
+    color: #f7bf65;
+    margin-top: 0;
+    margin-bottom: 0 !important;
+}
+
+p#since{
+    color: rgb(0, 15, 28);
+    margin-top: 1%;
+    font-size: small;
+    margin-bottom: 7%;
+}
+
+.bottom-icon:hover, .bottom-icon:focus, .bottom-icon:active, .Mui-selected{
+    color: #f7bf65 !important; 
+}
