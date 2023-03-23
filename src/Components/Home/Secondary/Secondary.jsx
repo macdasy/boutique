@@ -7,6 +7,7 @@ export default function Secondary(props){
         <section id='secondary'>
             <div id='sec-data'>
                 <h1> Boutique </h1>
+                <p id='sec-text' > Let us comfort you completely </p>
                 <Button id='sec-btn' > Show Now </Button>
             </div>
         </section>

@@ -18,11 +18,13 @@ export default function Footer(props){
             <Box sx={{ width: '100%' }}>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                     <Grid item xs={12} md={6}  style={{ textAlign: 'center', padding:'5%'}}>
-                        <p> 
+                        <p id='foo-text'> 
                            "Imbibed deep within the roots of the early block printing history, 
                             melded with contemporary influences of Night and Daywear, the vision 
-                            of Papaya Whims comes alive.contemporary influences of Night and Daywear, the vision 
-                        of Papaya Whims comes alive.of Papaya Whims comes alive.of Papaya Whim"
+                            of Papaya Whims comes alive."
+                        </p>
+                        <p id='owner'>
+                            - The Owner, Boutique
                         </p>
                     </Grid> 
                     <Grid item xs={12} md={6} style={{ textAlign: 'center',  padding:'5%'}}>

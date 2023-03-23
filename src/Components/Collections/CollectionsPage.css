@@ -1,8 +1,63 @@
 
 
+/* #cPage{} */
 
-#CollectionsPage{
+#cheader{
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+    
+    text-align: center;
+    padding: 2%5%;
+}
 
-    padding: 10% 15%;
+#brand{
+    font-size: 3em;
+}
 
+#sub-t{
+    font-size: medium;
+}
+
+
+#input-field{
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+#mobile{
+    display: none;
+}
+
+@media (max-width:824px) {
+    #input-field{
+        display: none;
+    }
+}
+
+@media (max-width:824px) {
+    #mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5%;
+    }
+
+    #input-field-2{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+#size-select{
+    border: #ffffff;
+}
+
+#color .MuiOutlinedInput-root{
+    width: fit-content !important;
+}
+
+.size{
+    background: #ffffff !important;
 }

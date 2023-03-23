@@ -49,7 +49,7 @@ export default function Customers(props){
                         melded with contemporary influences of Night and Daywear, the vision 
                         of Papaya Whims comes alive.of Papaya Whims comes alive.of Papaya Whim"
                     </p>
-                    <p className='customer'> - Peekundi Dayalan </p>
+                    <p className='customer'> - Someone </p>
                 </div>
 
             </SwiperSlide>
@@ -61,7 +61,7 @@ export default function Customers(props){
                         melded with contemporary influences of Night and Daywear, the vision 
                         of Papaya Whims comes alive.of Papaya Whims comes alive.of Papaya Whim"
                     </p>
-                    <p className='customer'> - Peekundi Dayalan </p>
+                    <p className='customer'> - Someone 2 </p>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -72,51 +72,7 @@ export default function Customers(props){
                         melded with contemporary influences of Night and Daywear, the vision 
                         of Papaya Whims comes alive.of Papaya Whims comes alive.of Papaya Whim"
                     </p>
-                    <p className='customer'> - Peekundi Dayalan </p>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-            <div className='swipeCard'>
-                    <p className='rating'> <StarIcon/> <StarIcon/>  <StarIcon/>  <StarIcon/> </p>
-                    <p className='comment'> 
-                        "Imbibed deep within the roots of the early block printing history, 
-                        melded with contemporary influences of Night and Daywear, the vision 
-                        of Papaya Whims comes alive.of Papaya Whims comes alive.of Papaya Whim"
-                    </p>
-                    <p className='customer'> - Peekundi Dayalan </p>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-            <div className='swipeCard'>
-                    <p className='rating'> <StarIcon/> <StarIcon/>  <StarIcon/>  <StarIcon/> </p>
-                    <p className='comment'> 
-                        "Imbibed deep within the roots of the early block printing history, 
-                        melded with contemporary influences of Night and Daywear, the vision 
-                        of Papaya Whims comes alive.of Papaya Whims comes alive.of Papaya Whim"
-                    </p>
-                    <p className='customer'> - Peekundi Dayalan </p>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-            <div className='swipeCard'>
-                    <p className='rating'> <StarIcon/> <StarIcon/>  <StarIcon/>  <StarIcon/> </p>
-                    <p className='comment'> 
-                        "Imbibed deep within the roots of the early block printing history, 
-                        melded with contemporary influences of Night and Daywear, the vision 
-                        of Papaya Whims comes alive.of Papaya Whims comes alive.of Papaya Whim"
-                    </p>
-                    <p className='customer'> - Peekundi Dayalan </p>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-            <div className='swipeCard'>
-                    <p className='rating'> <StarIcon/> <StarIcon/>  <StarIcon/>  <StarIcon/> </p>
-                    <p className='comment'> 
-                        "Imbibed deep within the roots of the early block printing history, 
-                        melded with contemporary influences of Night and Daywear, the vision 
-                        of Papaya Whims comes alive.of Papaya Whims comes alive.of Papaya Whim"
-                    </p>
-                    <p className='customer'> - Peekundi Dayalan </p>
+                    <p className='customer'> - Also someone </p>
                 </div>
             </SwiperSlide>
         </Swiper>

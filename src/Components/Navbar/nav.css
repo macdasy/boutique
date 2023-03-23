@@ -1,16 +1,20 @@
 
 
 #nav-btn {
-    color: #F5AF65;
-    font-weight: 600;
+    color: #F8C47B;
+    /* font-weight: 600; */
     /* border-radius: 0 !important; */
     transition: all 0.7s;
+    font-size: medium;
+    font-family: 'Squada One', cursive;
+    letter-spacing: 2px;
 }
 
 
 #nav-btn:hover {
-    color: aliceblue;
-    background: #F5AF65;
+    opacity: 0.8s;
+    background: none;
+    text-shadow: 2px 2px #93939352;;
 }
 
 #landing-bg{
@@ -39,8 +43,8 @@
 }
 
 h4#opening{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 1px;
+    font-family: 'Tilt Neon', cursive;
+    letter-spacing: 5px;
     text-transform: uppercase;
     font-size: larger;
     color: white;
@@ -49,8 +53,9 @@ h4#opening{
 button#collection{
     background: #F8C47B;
     font-size: small;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Squada One', cursive;
+    letter-spacing: 2px;
     color: white;
     font-weight: bold;
-    padding: 1%;
+    padding: 0.5% 1%;
 }

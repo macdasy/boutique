@@ -10,7 +10,7 @@ export default function  Collections(props){
 
             <h4 id='collections'> Collections </h4>
             <Box sx={{ width: '100%' }}>
-                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                     <Grid item xs={12} md={4}  style={{ textAlign: 'center'}}>
                             <img className='col-img' src='https://cdn.shopify.com/s/files/1/0570/6543/9392/products/women-woven-design-cotton-blend-ethereal-embroidery-kurta-set-330160_650x.jpg?v=1659360083' alt=''/>
                             <p className='collct'> Kurtas </p>

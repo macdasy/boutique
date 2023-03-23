@@ -43,7 +43,7 @@ export default function ElevateAppBar(props) {
       <ElevationScroll {...props}>
         <AppBar style={{ color:'black' }} id='appbar'  >
           <Toolbar style={{ justifyContent: 'space-between', padding:'2% 10%' }}>
-            <Typography variant="h6" component="div" style={{ color:'#F5AF65', fontWeight:'bold' }}>
+            <Typography variant="h6" component="div" style={{ fontSize:'1.8em', color:'#F5AF65', fontWeight:'bold', fontFamily:'Kanit, sans-serif' }}>
               Boutique
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>

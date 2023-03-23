@@ -11,6 +11,8 @@
 }
 
 h2#cust{
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
 }
@@ -32,9 +34,11 @@ p.rating{
 
 p.comment{
     font-size: medium;
+    font-family: "Tilt Neon", cursive;
 }
 
 p.customer{
+    font-family: 'Kanit', sans-serif;
 }
 
 .swiper {

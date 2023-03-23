@@ -9,6 +9,8 @@
 h4#collections{
     border-bottom: #ffbd60 0.8px solid;
     display: inline-block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.7em;
 }
 
 p#group{
@@ -21,17 +23,20 @@ p#group{
 }
 
 .collct{
+    font-family: Rowdies;
+    font-size: 1.3em;
     padding: 1%;
-    color: black;
+    color: rgb(48, 48, 48);
     text-align: center;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 #collbtn{
+    font-family: 'Squada One', cursive;
+    letter-spacing: 3px;
     border: 0.5px solid #ffd79e;
     color: #ffd79e;
-    font-size: large;
+    font-size: medium;
     font-weight: bold;
     border-radius: 5px;
     text-transform: uppercase;
@@ -40,7 +45,7 @@ p#group{
 }
 
 #collbtn:hover{
-    background: #fadaae;
+    background: #ffedd4;
     color: #ffb648;
 }
 
