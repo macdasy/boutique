@@ -52,7 +52,7 @@ export default function ChipSelection(props) {
   return (
     <div>
       <FormControl sx={{ m: 1, width: 150 }} id={props.id}>
-        <InputLabel id="demo-multiple-chip-label" style={{ textTransform:'capitalize' }}>{props.id}</InputLabel>
+        <InputLabel id="demo-multiple-chip-label" style={{ textTransform:'capitalize',fontFamily:'Tilt Neon' }}>{props.id}</InputLabel>
         <Select
           labelId="demo-multiple-checkbox-label"
           id={props.id+'-select'}
@@ -62,6 +62,7 @@ export default function ChipSelection(props) {
           input={<OutlinedInput label="Tag" />}
           renderValue={(selected) => selected.join(', ')}
           MenuProps={MenuProps}
+          style={{ borderRadius:0, fontFamily:'Tilt Neon' }}
         >
           {names.map((name) => (
             <MenuItem

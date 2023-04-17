@@ -1,6 +1,5 @@
 
 import './Customers.css';
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import StarIcon from '@mui/icons-material/Star';
@@ -8,14 +7,16 @@ import StarIcon from '@mui/icons-material/Star';
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { FreeMode, Pagination } from 'swiper';
+import { Pagination } from 'swiper';
 
 export default function Customers(props){
 
     return(
-        <section id='customers-section'>
+        <section id='customers-section' 
+            data-uk-scrollspy="cls: uk-animation-fade; target: #cust-swipe; delay: 500;">
             <h2 id='cust'> Our Happy Customers <hr></hr> </h2>
         <Swiper
+            id='cust-swipe'
             slidesPerView={3}
             spaceBetween={30}
             freeMode={true}

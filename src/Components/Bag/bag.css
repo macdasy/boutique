@@ -1,0 +1,29 @@
+
+
+#wishlist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#wishlist a{
+    display: block;
+}
+
+#w-shop, #w-cart{
+    text-transform: none;
+    background: orange;
+    color: black;
+    padding: 10% 6%;
+    border-radius: 1px;
+    height: fit-content;
+    font-family: 'Tilt Neon', cursive;
+}
+
+
+#w-cart{
+    color: orange;
+    background: black;
+}

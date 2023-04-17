@@ -1,0 +1,32 @@
+
+
+#bot-wrap{
+    margin-top: 5%;
+    display: flex;
+    justify-content:space-between;
+    padding: 0 5%;
+}
+
+
+#addtocart{
+    background: black;
+    text-transform: none;
+    color: white;
+    border-radius: 1px;
+}
+
+.procontainer { position: relative; }
+.procontainer img { 
+    position: relative;
+  display: inline-block;
+ }
+
+.procontainer .fav-icon { 
+    position: absolute;
+      right: 1%;
+      top: 5%;
+      transform: translate(-50%, -50%);
+
+      color: black;
+      background: white;
+}

@@ -20,3 +20,7 @@ img{
 html{
   scroll-behavior: smooth !important;
 }
+
+a{
+  text-decoration: none !important;
+}

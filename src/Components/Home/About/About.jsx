@@ -21,9 +21,11 @@ export default function  About(props){
 
             <h4 id='about'> About Us  </h4>
 
-            <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }} columns={{ xs: 1, sm: 6, md: 12 }} style={{ padding:'3% 0' }}>
+            <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }} columns={{ xs: 1, sm: 6, md: 12 }} style={{ padding:'3% 0' }}
+                data-uk-scrollspy="cls: uk-animation-fade; target: #about-media; delay: 500;">
+    
             {Object.keys(details).map((d, index) => (
-                <Grid item xs={2} sm={4} md={4} key={index} style={{padding:'3% 2%'}}>
+                <Grid item xs={2} sm={4} md={4} key={index} style={{padding:'3% 2%'}} id='about-media'>
                     <Card sx={{ maxWidth: '100%' }} id='about-card' style={{padding:'7%10%'}}>
                     <CardMedia
                         sx={{ height: 300 }}

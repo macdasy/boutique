@@ -1,21 +1,30 @@
 
-
 /* #cPage{} */
 
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+    border-radius: 0px !important;
+}
+
 #cheader{
-    background-color: #ffffff;
-    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
-    
+    background-color: rgba(255, 255, 255, 0.504);
+    /* background-image: url("https://www.transparenttextures.com/patterns/arches.png"); */
+    color: gold;
     text-align: center;
     padding: 2%5%;
 }
 
 #brand{
     font-size: 3em;
+    color: #000;
+    margin-bottom: 0;
+    font-family: 'Josefin Sans';
+
 }
 
 #sub-t{
+    margin-top: 1%;
     font-size: medium;
+    color: orange;
 }
 
 
@@ -27,6 +36,10 @@
 
 #mobile{
     display: none;
+}
+
+.MuiListItemText-primary, .MuiMenuItem-root{
+    font-family: 'Tilt Neon' !important;
 }
 
 @media (max-width:824px) {
@@ -58,6 +71,23 @@
     width: fit-content !important;
 }
 
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected{
+    background: rgba(255, 221, 157, 0.304) !important;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected::after{
+    content: url('https://img.icons8.com/external-inkubators-basic-outline-inkubators/15/null/external-close-user-interface-inkubators-basic-outline-inkubators.png');
+    display: block;
+    position: absolute;
+    right: 0;
+    margin: 0 10px 0 0;
+}
+
 .size{
     background: #ffffff !important;
+}
+
+.MuiCardHeader-title{
+    font-family: 'Josefin Sans' !important;
 }

@@ -6,8 +6,14 @@
     /* border-radius: 0 !important; */
     transition: all 0.7s;
     font-size: medium;
-    font-family: 'Squada One', cursive;
+    font-family: 'Tilt Neon';
     letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.act-btn{
+    background: none !important;
+    color: #F8C47B !important;
 }
 
 
@@ -50,12 +56,25 @@ h4#opening{
     color: white;
 }
 
+@media (max-width:500px) {
+    #landing-banner{
+        padding-left: 5%;
+        padding-right: 5%;
+        align-items: center;
+    }
+
+    h4#opening{
+        text-align: center;
+    }
+}
+
 button#collection{
-    background: #F8C47B;
+    background: #ffae3d;
     font-size: small;
-    font-family: 'Squada One', cursive;
+    font-family: 'Josefin Sans';
     letter-spacing: 2px;
     color: white;
     font-weight: bold;
     padding: 0.5% 1%;
+    border-radius: 1px;
 }

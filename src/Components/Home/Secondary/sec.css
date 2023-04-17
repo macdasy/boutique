@@ -14,12 +14,13 @@
     justify-content:center;
     align-items: flex-start;
     flex-direction: column;
-    padding-left: 20%;
+    padding-left: 15%;
     height: 90vh;
 }
 
 #sec-data h1{
-    font-family: Kanit, sans-serif;
+    font-family:'Josefin Sans';
+    font-weight: lighter;
     color: #F5AF65;
     font-size: 2.8em;
     margin-bottom: 0;
@@ -31,17 +32,18 @@
 }
 
 button#sec-btn{
-    font-family: 'Squada One', cursive;
+    font-family: 'Josefin Sans';
+    align-items: center;
     letter-spacing: 3px;
     border: 1px solid black;
-    color: white;
     transition: all 0.7s;
-    color: black;
+    color: #F7BC6A;
     padding: 0.5% 2%;
+    border-radius: 1px;
+    background: black;
 }
 
 
 button#sec-btn:hover{
-    background: black;
-    color: #F7BC6A;
+    opacity: 0.8;
 }

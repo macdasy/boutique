@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
+import SquareIcon from '@mui/icons-material/Square';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -48,8 +49,9 @@ export default function ColorSelection(props) {
   return (
     <div>
       <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id="demo-multiple-chip-label">Color</InputLabel>
+        <InputLabel id="demo-multiple-chip-label" style={{ fontFamily:'Tilt Neon' }} >Color</InputLabel>
         <Select
+          style={{ borderRadius:0 }}
           labelId="demo-multiple-chip-label"
           id="demo-multiple-chip"
           multiple
@@ -70,7 +72,8 @@ export default function ColorSelection(props) {
               key={name}
               value={name}
               style={getStyles(name, personName, theme)}
-            >
+            > 
+              <SquareIcon style={{ marginLeft:'3%', marginRight:'3%', color:name }} />
               {name}
             </MenuItem>
           ))}

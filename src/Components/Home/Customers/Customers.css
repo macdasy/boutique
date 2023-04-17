@@ -14,10 +14,11 @@ h2#cust{
     font-family: 'Josefin Sans', sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-align: center;
+    text-align: center !important;
 }
 
 h2#cust hr{
+    margin: auto !important;
     border-top: 2px solid #F8C145;
     width: 20%;
 }

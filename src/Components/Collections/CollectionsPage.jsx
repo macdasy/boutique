@@ -7,6 +7,7 @@ import Menu from './MobileMenu';
 import Products from './Products';
 import CheckmarkSelect from './Select1';
 import ChipSelection from './Select2';
+import CollecNav from './CollNav';
 
 const sizes = ['s', 'm', 'l', 'xl', 'xxl'];
 const colors = ['black', 'blue', 'yellow', 'green', 'white'];
@@ -18,15 +19,16 @@ export default function CollectionsPage() {
 
   return (
     <section id="cPage">
+      <CollecNav />
 
-      <div id='cheader'>
+      <div id='cheader' style={{ padding:"10vh 3% 2vh" }}>
         <h1 id='brand'> Boutique </h1>
         <h1 id='sub-t'> Find what you like among our best ! </h1>
       </div>
 
       <div id='input-field'>
         <CheckmarkSelect />
-        <ChipSelection id='size' values={sizes}/>
+        <ChipSelection id='size' values={sizes} />
         <ColorSelection id='color' colors={colors}/>
       </div>
 
@@ -36,6 +38,7 @@ export default function CollectionsPage() {
       </div>
 
       <Products num={value} />
+      
       <div
         style={{ 
           margin:'5%',
@@ -43,7 +46,7 @@ export default function CollectionsPage() {
           justifyContent:'center'
         }}
       >  
-        <Button variant='outlined' style={{ borderColor:'black', color:"black" }} onClick={()=>{setValue(value+5)}}  > Load More </Button>
+        <Button variant='outlined' style={{ borderColor:'black', background:'none', color:"black", borderRadius:0, textTransform:'none' }} onClick={()=>{setValue(value+5)}}  > Load More </Button>
       </div>
 
     </section>

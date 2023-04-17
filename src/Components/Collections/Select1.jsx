@@ -33,7 +33,6 @@ export default function CheckmarkSelect() {
       target: { value },
     } = event;
     setPersonName(
-      // On autofill we get a stringified value.
       typeof value === 'string' ? value.split(',') : value,
     );
   };
@@ -41,7 +40,7 @@ export default function CheckmarkSelect() {
   return (
     <div>
       <FormControl sx={{ m: 1, width: 250 }}>
-        <InputLabel id="demo-multiple-checkbox-label">Type</InputLabel>
+        <InputLabel id="demo-multiple-checkbox-label" style={{ fontFamily:'Tilt Neon' }}>Type</InputLabel>
         <Select
           labelId="demo-multiple-checkbox-label"
           id="demo-multiple-checkbox"
@@ -51,11 +50,12 @@ export default function CheckmarkSelect() {
           input={<OutlinedInput label="Type" />}
           renderValue={(selected) => selected.join(', ')}
           MenuProps={MenuProps}
+          style={{ fontFamily:'Tilt Neon', borderRadius:'0' }}
         >
           {names.map((name) => (
             <MenuItem key={name} value={name}>
               <Checkbox checked={personName.indexOf(name) > -1} />
-              <ListItemText primary={name} />
+              <ListItemText primary={name} style={{ fontFamily:'Tilt Neon' }} />
             </MenuItem>
           ))}
         </Select>
