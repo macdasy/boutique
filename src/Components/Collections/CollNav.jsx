@@ -7,8 +7,7 @@ import Typography from '@mui/material/Typography';
 import { IconButton, Slide, useScrollTrigger } from '@mui/material';
 
 
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 
 function HideOnScroll(props) {
@@ -37,7 +36,7 @@ function DrawerAppBar(props) {
         <AppBar component="nav" style={{ background:'white', padding:'1%5%', boxShadow:'none', borderBottom:"0.5px solid #00000040" }}>
           <Toolbar>
             <Typography
-              variant="h6"
+              variant="h5"
               component="div"
               sx={{ flexGrow: 1 }}
               style={{ fontFamily:'Josefin Sans', color:'black' }}
@@ -45,8 +44,11 @@ function DrawerAppBar(props) {
               Boutique
             </Typography>
             <Box>
-              <a href='/favourites' > <IconButton style={{ color:'black', marginRight: '3vh' }}>  <FavoriteIcon /> </IconButton> </a>
-              <a href='/cart' > <IconButton style={{ color:'black', marginRight: '3vh' }}>  <ShoppingCartIcon /> </IconButton> </a>
+              <div style={{ display:'flex', gap:"20px" }}>
+                <a href="" class="uk-icon-link" data-uk-icon="heart"></a>
+                <a href="" class="uk-icon-link" data-uk-icon="cart"></a>
+
+              </div>
             </Box>
           </Toolbar>
         </AppBar>

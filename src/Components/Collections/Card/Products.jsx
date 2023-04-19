@@ -4,7 +4,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 // import { useSelector, useDispatch } from 'react-redux'
 // import { addItem } from '../Redux/itemSlice'
-import './CollectionsPage.css';
+import '../CollectionsPage.css';
 import ProCard from "./ProCard";
 
 

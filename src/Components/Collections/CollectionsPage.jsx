@@ -2,11 +2,11 @@
 import { Button } from '@mui/material';
 import { useState } from 'react';
 import './CollectionsPage.css';
-import ColorSelection from './ColorSelection';
+import ColorSelection from './Filters/ColorSelection';
 import Menu from './MobileMenu';
-import Products from './Products';
-import CheckmarkSelect from './Select1';
-import ChipSelection from './Select2';
+import Products from './Card/Products';
+import CheckmarkSelect from './Filters/Select1';
+import ChipSelection from './Filters/Select2';
 import CollecNav from './CollNav';
 
 const sizes = ['s', 'm', 'l', 'xl', 'xxl'];

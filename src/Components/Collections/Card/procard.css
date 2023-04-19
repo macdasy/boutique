@@ -1,0 +1,91 @@
+
+
+#bot-wrap{
+    margin-top: 5%;
+    display: flex;
+    justify-content:space-between;
+    padding: 0 5%;
+}
+
+
+#addtocart{
+    background: black;
+    text-transform: none;
+    color: white;
+    border-radius: 1px;
+}
+
+#card-img-cont {
+    position: relative;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#card-img-cont img{
+    vertical-align: top;
+    width: 100%;
+    max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#card-img-cont:hover img{
+    -ms-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+.btn-cont{
+    padding-top: 7%;
+}
+
+#buynow, #tocart{
+    border-radius: 0px;
+    width: 100%;
+    margin-bottom: 3%;
+    text-transform: none;
+    border-color: orange;
+    font-size: medium;
+    font-family: 'Josefin Sans';
+}
+
+#tocart{
+    color: orange;
+}
+
+#tocart:hover{
+    background: none;
+    border-width: 2px;
+}
+
+#buynow{
+    color: white;
+    background: orange;
+    transition: all 0.7s;
+}
+
+#buynow:hover{
+    background: rgb(230, 150, 2);
+}
+
+#atagcont a{
+    color: rgba(0, 0, 0, 0.463);
+    transition: all 0.7s;
+    font-family: 'Josefin Sans';
+}
+
+#atagcont a:hover{
+    color: rgba(0, 0, 0, 0.774)
+}
+
+#addcont p{
+    color: rgba(0, 0, 0, 0.463);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-family: 'Josefin Sans';
+}

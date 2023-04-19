@@ -7,7 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
-import './CollectionsPage.css';
+import '../CollectionsPage.css';
 import { Checkbox } from '@mui/material';
 
 const ITEM_HEIGHT = 48;

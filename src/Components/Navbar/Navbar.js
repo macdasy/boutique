@@ -6,25 +6,26 @@ import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { Button, Divider, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Menu, MenuItem, SwipeableDrawer } from '@mui/material';
+import { Button, Divider, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Menu, MenuItem, Slide, SwipeableDrawer } from '@mui/material';
 import './nav.css';
 import { FavoriteBorderOutlined, FavoriteOutlined, ShoppingBagOutlined } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-function ElevationScroll(props) {
+
+function HideOnScroll(props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
   // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
     target: window ? window() : undefined,
   });
 
-  return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0,
-  });
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
 }
 
 const navItems = ['Home', 'About', 'Contact'];
@@ -41,8 +42,8 @@ export default function ElevateAppBar(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <ElevationScroll {...props}>
-        <AppBar style={{ color:'black' }} id='appbar'  >
+      <HideOnScroll {...props}>
+        <AppBar style={{ color:'black', boxShadow:'none' }} id='appbar'  >
           <Toolbar style={{ justifyContent: 'space-between', padding:'2% 10%' }}>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems.map((item) => (
@@ -74,7 +75,7 @@ export default function ElevateAppBar(props) {
 
           </Toolbar>
         </AppBar>
-      </ElevationScroll>
+        </HideOnScroll>
       <Toolbar />
       <Container style={{ margin:0, padding:0, maxWidth:'100%', height:'100vh' }}  >
         <Box sx={{ my: 2 }} style={{ height:'inherit', marginTop:'0' }}>

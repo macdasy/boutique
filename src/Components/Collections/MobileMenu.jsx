@@ -4,8 +4,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import MenuIcon from '@mui/icons-material/Menu';
-import ChipSelection from './Select2';
-import ColorSelection from './ColorSelection';
+import ChipSelection from './Filters/Select2';
+import ColorSelection from './Filters/ColorSelection';
 
 
 
