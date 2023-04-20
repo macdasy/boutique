@@ -1,0 +1,32 @@
+
+
+
+#lander{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0% 5%;
+    padding-top: 3%;
+    text-align: center;
+
+    height: 80vh;
+    background-image: url('../../../Stacks/land.png') !important;
+    /* Center and scale the image nicely */
+    background-position:center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-clip: content-box;
+
+}
+
+
+#land-btn{
+    border-radius: 0px !important;
+    background: white;
+    color:  #7d875f;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+}

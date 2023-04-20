@@ -1,49 +1,72 @@
 
-
-#secondary{
-    background: url('https://images.unsplash.com/photo-1533670803344-afe2e89e5493?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8');
-    background-repeat: no-repeat;
-    background-position:top;
-    background-size: cover;
-    height: 100%;
+#secondary h2:not(#td-name){
+    margin-left: 5%;
+    border-bottom: #000000 0.8px solid;
+    display: inline-block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.7em;
 }
 
-#sec-data{
-    position: relative;
-    display: flex;
-    justify-content:center;
-    align-items: flex-start;
-    flex-direction: column;
-    padding-left: 15%;
-    height: 90vh;
-}
-
-#sec-data h1{
-    font-family:'Josefin Sans';
-    font-weight: lighter;
-    color: #F5AF65;
-    font-size: 2.8em;
+#secondary #td-name{
+    /* border-bottom: #000000 0.8px solid; */
+    display: inline-block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.7em;
     margin-bottom: 0;
 }
 
-#sec-text{
-    font-size: 1.3em;
-    font-family: "Tilt Neon", cursive;
+#secondary #td-price{
+    margin-top: 0;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
-button#sec-btn{
+#sn{
+    /* margin-left:auto; */
+    padding-right: 5%;
+    color: #7d875f;
     font-family: 'Josefin Sans';
-    align-items: center;
-    letter-spacing: 3px;
-    border: 1px solid black;
-    transition: all 0.7s;
-    color: #F7BC6A;
-    padding: 0.5% 2%;
-    border-radius: 1px;
-    background: black;
 }
 
+#arrow{
+    transition: all 0.7s;
+}
 
-button#sec-btn:hover{
-    opacity: 0.8;
+#sn:hover #arrow{
+    padding-left: 3px;
+}
+
+#sec-img-cont{
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#sec-img-cont img{
+    vertical-align: top;
+    width: 100%;
+    max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#sec-img-cont-2 {
+    height: 100%;
+}
+#sec-img-cont-2 img{
+    vertical-align: top;
+    width: 60%;
+    height: auto;
+    max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#gal-2, #gal-3{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat !important;
+    background-size: 100% auto !important;
 }

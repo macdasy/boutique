@@ -1,16 +1,13 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import { Button, Divider, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Menu, MenuItem, Slide, SwipeableDrawer } from '@mui/material';
+import { Button, Slide } from '@mui/material';
 import './nav.css';
-import { FavoriteBorderOutlined, FavoriteOutlined, ShoppingBagOutlined } from '@mui/icons-material';
-import MenuIcon from '@mui/icons-material/Menu';
 
+import logo from '../../Stacks/logo.png';
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -28,65 +25,42 @@ function HideOnScroll(props) {
   );
 }
 
-const navItems = ['Home', 'About', 'Contact'];
-const action = [ <ShoppingBagOutlined />, <FavoriteBorderOutlined />];
 
 export default function ElevateAppBar(props) {
 
-  const scroll = () => {
-    const section = document.querySelector( '#collections' );
-    let position = section.getBoundingClientRect();
-    window.scrollTo(position.left, position.top + window.scrollY - 100);
-  };
+  const nav = window.location.pathname;
+  console.log(nav);
 
   return (
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar style={{ color:'black', boxShadow:'none' }} id='appbar'  >
-          <Toolbar style={{ justifyContent: 'space-between', padding:'2% 10%' }}>
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-              {navItems.map((item) => (
-                <Button key={item} id='nav-btn' >
-                  {item}
-                </Button>
-              ))}
-            </Box>
+        <AppBar style={{ color:'black', boxShadow:'none', borderBottom:"1px solid #F0EEE7" }} id='appbar'  >
+          <Toolbar style={{ padding:'1.5% 5%', gap:"20px" }}>
 
-            <Typography variant="h6" component="div" style={{ fontSize:'1.8em', color:'#F5AF65', fontFamily:'Josefin Sans' }}>
-              Boutique
-            </Typography>
-
-            <Box sx={{ display: { xs: 'flex', sm:'none', md: 'none' } }}>
-                {action.map((item) => (
-                  <Button key={item} className='act-btn'>
-                    {item}
-                  </Button>
-                ))}
-            </Box>
+            <img src={logo} alt='' style={{ width:'10vh' }} />
 
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-              {action.map((item) => (
-                <Button key={item} className='act-btn' >
-                  {item}
-                </Button>
-              ))}
+                <Button id='nav-btn' style={{   }} > Home </Button>
+                <Button id='nav-btn' style={{ textDecoration: nav==='/collections' ? 'underline' : 'none' }}  > Shop </Button>
+                <Button id='nav-btn' style={{ textDecoration: nav==='/contact' ? 'underline' : 'none' }}  > Contact </Button>
+            </Box>
+
+            <Box sx={{ display: { xs: 'flex', sm:'none', md: 'none' }, gap:"20px" }} style={{marginLeft: 'auto'}}>
+              <a href="" class="uk-icon-link" data-uk-icon="heart"></a>
+              <a href="" class="uk-icon-link" data-uk-icon="cart"></a>
+            </Box>
+
+            <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap:"30px" }} style={{marginLeft: 'auto'}}>
+              <a href="" className="uk-icon-link act-btn" data-uk-icon="heart"></a>
+              <a href="" className="uk-icon-link act-btn" data-uk-icon="cart"></a>
             </Box>
 
           </Toolbar>
         </AppBar>
         </HideOnScroll>
       <Toolbar />
-      <Container style={{ margin:0, padding:0, maxWidth:'100%', height:'100vh' }}  >
-        <Box sx={{ my: 2 }} style={{ height:'inherit', marginTop:'0' }}>
-         <div id='landing-bg' style={{ height:'inherit' }} data-uk-scrollspy="cls: uk-animation-fade; target: #landing-banner; delay: 500;"> 
-              <div id='landing-banner'>
-                 <h4 id='opening'> Good Clothes open all the doors </h4>
-                <Button id='collection' onClick={scroll}> Shop Now </Button>
-              </div>
-         </div>
-        </Box>
-      </Container>
+        <Box pb={7} sx={{ pb:7 }} />
     </React.Fragment>
   );
 }

@@ -2,50 +2,25 @@
 
 
 #collections-section{
-    padding: 1% 10% 5%;
+    padding: 1% 5% 5%;
 }
 
 
 h4#collections{
-    border-bottom: #ffbd60 0.8px solid;
+    border-bottom: #000000 0.8px solid;
     display: inline-block;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.7em;
 }
 
-p#group{
-    padding-bottom: 2%;
+#shopall{
+    display: block;
+    border-radius: 0;
+    margin: auto !important;
+    margin-top: 2% !important;
+    background: #7d875f;
+    text-transform: capitalize;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    box-shadow: none !important;
+    transition: all 0.7s;
 }
-
-
-.col-img{
-    width: 100%;
-}
-
-.collct{
-    font-family: Rowdies;
-    font-size: 1.3em;
-    padding: 1%;
-    color: rgb(48, 48, 48);
-    text-align: center;
-    letter-spacing: 0.5px;
-}
-
-#collbtn{
-    font-family: 'Squada One', cursive;
-    letter-spacing: 3px;
-    border: 0.5px solid #ffd79e;
-    color: #ffd79e;
-    font-size: medium;
-    font-weight: bold;
-    border-radius: 5px;
-    text-transform: uppercase;
-    padding: 0.3% 3%;
-    transition: all 1s;
-}
-
-#collbtn:hover{
-    background: #ffedd4;
-    color: #ffb648;
-}
-

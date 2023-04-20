@@ -1,18 +1,5 @@
-import { Button, Grid } from '@mui/material';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
+import { Button, Stack } from '@mui/material';
 import './about.css';
-
-
-const details = {
-    0: ['Comfort', 'Find what comforts you!', 'https://media.istockphoto.com/id/1164504532/vector/illustration-of-a-sad-girl-in-a-yellow-raincoat-vector-a-woman-under-an-umbrella-in-rainy.jpg?s=612x612&w=0&k=20&c=xUADieghGLlxzUJzgSBT9J5TXw4gnhaWP5uzpBcnilM='],
-    1: ['Elegant', 'That is our special!', 'https://cdn.dribbble.com/users/1731254/screenshots/13960747/media/e0bb9ddb0154a4df37c9d48b1613f43f.png?compress=1&resize=400x300'],
-    2: ['Price', 'As you wish!', 'https://img.freepik.com/free-vector/sales-promotion-cartoon-web-icon-marketing-strategy-rebate-advertising-discount-offer-low-price-idea-clearance-sale-customer-attraction-vector-isolated-concept-metaphor-illustration_335657-2752.jpg?w=2000'],
-}
-
 
 export default function  About(props){
 
@@ -21,29 +8,25 @@ export default function  About(props){
 
             <h4 id='about'> About Us  </h4>
 
-            <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }} columns={{ xs: 1, sm: 6, md: 12 }} style={{ padding:'3% 0' }}
-                data-uk-scrollspy="cls: uk-animation-fade; target: #about-media; delay: 500;">
-    
-            {Object.keys(details).map((d, index) => (
-                <Grid item xs={2} sm={4} md={4} key={index} style={{padding:'3% 2%'}} id='about-media'>
-                    <Card sx={{ maxWidth: '100%' }} id='about-card' style={{padding:'7%10%'}}>
-                    <CardMedia
-                        sx={{ height: 300 }}
-                        image={details[d][2]}
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div" style={{ fontFamily: 'Rowdies' }}>
-                            {details[d][0]}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" style={{ fontFamily: 'Tilt Neon' }}>
-                            {details[d][1]}
-                        </Typography>
-                    </CardContent>
-                    </Card>
-                </Grid>
-            ))}
-            </Grid>
-            {/* <p> <Button id='about-btn'> Know More </Button> </p> */}
+            <p style={{padding:'0% 7%', fontFamily: 'Schibsted Grotesk', textAlign:"center" }}>
+                URJA is a home-grown brand from india that majorly focusues on natural dyeing and eco-printing.
+                Our brand was officially launched in 2023, although we have been in practice estimated in 2021. It took
+                us almost 2 years of continuous learning , exploration and experimentation to begin dyeing professionally.
+                Urja takes great pride upon embarking on a mindful and a sustainable journey by foraging colours from
+                nature and ethically sourcing materials. We ensure that our products are curated putting forth the
+                environment as a responsible aspect in all of our processes. Being a slow fashion brand, each product is pre-treated, 
+                naturally-dyed, post-treated and cured by hand with absolute labor of love.
+               <p style={{paddingTop:"3%"}}>
+                Our processes include using botanicals from plants such as leaves, flowers and roots to extract colours or create prints on textiles.
+                A lot of thought, care and research has been invested upon URJA- offering the best of eco-friendly, slow-crafted
+                and hand-curated products. So choose URJA and be a part of this sustainable journey.
+               </p>
+            </p>
+
+            <Stack spacing={2} direction="row" style={{justifyContent:"center"}}>
+                <Button disableElevation disableFocusRipple disableRipple disableTouchRipple className='abt-btn' variant="text"> Instructions </Button>
+                <Button disableElevation disableFocusRipple disableRipple disableTouchRipple className='abt-btn' variant="text"> Policies </Button>
+            </Stack>
 
         </section>
     )

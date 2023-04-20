@@ -3,11 +3,11 @@
 #customers-section{
     padding: 12% 7%;
 
-    background: url('./bg.png');
+    /* background: url('./bg.png');
     background-repeat: no-repeat;
     background-position:bottom;
     background-position-x: left;
-    background-position-y: bottom;
+    background-position-y: bottom; */
 }
 
 h2#cust{
@@ -19,7 +19,7 @@ h2#cust{
 
 h2#cust hr{
     margin: auto !important;
-    border-top: 2px solid #F8C145;
+    border-top: 2px solid #7d875f;
     width: 20%;
 }
 
@@ -30,7 +30,7 @@ h2#cust hr{
 
 p.rating{
     font-size: small;
-    color: #F8C145;
+    color: #7d875f;
 }
 
 p.comment{

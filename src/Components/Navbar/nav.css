@@ -1,26 +1,30 @@
 
 
 #nav-btn {
-    color: #F8C47B;
+    color: rgb(70, 70, 70);
     /* font-weight: 600; */
     /* border-radius: 0 !important; */
     transition: all 0.7s;
-    font-size: medium;
-    font-family: 'Tilt Neon';
-    letter-spacing: 2px;
+    font-size: small;
+    font-family: 'Schibsted Grotesk', sans-serif;
     text-transform: capitalize;
 }
 
 .act-btn{
     background: none !important;
-    color: #F8C47B !important;
+    color: black !important;
+    transition: all 0.5s;
+}
+
+.act-btn:hover{
+    opacity: 0.5;
 }
 
 
 #nav-btn:hover {
     opacity: 0.8s;
     background: none;
-    text-shadow: 2px 2px #93939352;;
+    text-decoration: underline !important;
 }
 
 #landing-bg{

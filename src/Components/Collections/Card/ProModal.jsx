@@ -1,19 +1,14 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import { Button, ButtonGroup, DialogContentText, Slide } from '@mui/material';
-
+import { Button, ButtonGroup, DialogContentText } from '@mui/material';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
-
 import './procard.css';
 import Suggestion from './Suggestions';
-import { Facebook, Instagram, WhatsApp } from '@mui/icons-material';
+import ProFooter from './ProFooter';
 
 
 export default function ProModal(props) {
@@ -100,38 +95,7 @@ export default function ProModal(props) {
                 </Box>
                 <Suggestion />
 
-                <div id='modal-footer' style={{ marginTop:"8%" }} >
-                  <hr style={{marginBottom:'3%'}} />
-                <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                  <Grid item xs={12} md={6}>
-                    <h4 style={{ fontFamily:'Josefin Sans' }}> Boutique </h4> 
-                    <div style={{lineHeight:2}} id='atagcont' >
-                      <a href='./collections'> Collections </a> <br/>
-                      <a href='./about'> About </a> <br/>
-                      <a href='./contact'> Contact </a> <br/>
-                      <a href='./policy'> Privacy Policy </a> <br/>
-                    </div>
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <h4 style={{ fontFamily:'Josefin Sans' }}> Shop Details </h4> 
-                    <div id='addcont'>
-                        <p> 12/24 </p>
-                        <p> Vascodagam Street, </p>
-                        <p> Jillianh, </p>
-                        <p> Bangalore, </p>
-                        <IconButton style={{paddingLeft:0, background:'none'}} >
-                          <Instagram style={{ color: 'grey' }} />
-                        </IconButton>
-                        <IconButton style={{ background:'none'}}>
-                          <Facebook style={{ color: 'grey' }} />                        
-                        </IconButton>
-                        <IconButton style={{ background:'none'}}>
-                          <WhatsApp style={{ color: 'grey' }} />                    
-                        </IconButton>
-                      </div>
-                  </Grid>
-                </Grid>
-                </div>
+                <ProFooter />
             </DialogContentText>
             </DialogContent>
         </Dialog>
