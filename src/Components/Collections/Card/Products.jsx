@@ -64,9 +64,9 @@ export default function Products(props) {
   ]
 
   return (
-    <section id="products">
+    <section id="products" style={{ marginBottom:"5%" }}>
         <Box sx={{ my: 2 }}>
-          <Box sx={{ width: "100%", padding:'2%' }}>
+          <Box sx={{ width: "100%" }}>
             <Grid
               container
               rowSpacing={7}

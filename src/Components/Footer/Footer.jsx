@@ -3,12 +3,12 @@ import Grid from '@mui/material/Grid';
 import { Facebook, Instagram, WhatsApp } from '@mui/icons-material';
 import IconButton from '@mui/material/IconButton';
 
-import logo from '../../../Stacks/logo1.png';
+import logo from '../../Stacks/logo1.png';
 
-export default function ProFooter(props){
+export default function Footer(props){
 
     return(
-        <div id='modal-footer' style={{ padding:'0% 7% 3%' }} >
+        <div id='modal-footer' style={{ padding:'5% 0% 0%' }} >
                   <hr style={{marginBottom:'3%'}} />
                 <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                   <Grid item xs={12} md={4} style={{  paddingLeft:'7%' }}>

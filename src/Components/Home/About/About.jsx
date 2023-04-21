@@ -3,6 +3,11 @@ import './about.css';
 
 export default function  About(props){
 
+
+    const goToPolicy = (e) => {
+        window.location.pathname = '/policy';
+    }
+
     return(
         <section id='about-section'>
 
@@ -24,8 +29,8 @@ export default function  About(props){
             </p>
 
             <Stack spacing={2} direction="row" style={{justifyContent:"center"}}>
-                <Button disableElevation disableFocusRipple disableRipple disableTouchRipple className='abt-btn' variant="text"> Instructions </Button>
-                <Button disableElevation disableFocusRipple disableRipple disableTouchRipple className='abt-btn' variant="text"> Policies </Button>
+                <Button onClick={goToPolicy} disableElevation disableFocusRipple disableRipple disableTouchRipple className='abt-btn' variant="text"> Instructions </Button>
+                <Button onClick={goToPolicy} disableElevation disableFocusRipple disableRipple disableTouchRipple className='abt-btn' variant="text"> Policies </Button>
             </Stack>
 
         </section>

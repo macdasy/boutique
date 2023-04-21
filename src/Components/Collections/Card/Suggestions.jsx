@@ -1,22 +1,13 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import ProCard from './ProCard';
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
 
 export default function Suggestion(props){
 
     return(
-        <section id="suggestions" style={{ marginTop:"5%" }}>
+        <section id="suggestions" style={{ marginTop:"5%", marginBottom:"5%" }}>
 
             <h3 style={{ fontFamily:'Josefin Sans' }}> You might also like </h3>
 

@@ -29,10 +29,10 @@ export default function ProCard(props){
                 <div id="bot-wrap">
                     <div style={{ display:'flex', flexDirection:'column', alignItems:'start' }}>
                         <h5 style={{ fontFamily:'Josefin Sans', marginBottom:0 }}> {name} </h5>
-                        <p style={{ fontFamily:'Josefin Sans', marginTop:0 }}> Rs. {price} </p>  
+                        <p style={{ color:'#7d875f', fontFamily:'Josefin Sans', marginTop:0 }}> Rs. {price} </p>  
                     </div>
                     <ul class="uk-iconnav">
-                        <li><a style={{color:'black'}} onClick={handleFav} data-uk-icon="icon: heart"></a></li>
+                        <li><a style={{color:'black'}} onClick={handleFav} data-uk-icon="icon: bag"></a></li>
                         <li><a style={{color:'black'}} uk-icon="icon: social"></a></li>
                     </ul>
                 </div>

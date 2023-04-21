@@ -5,6 +5,8 @@ import App from './App/App';
 import 'font-awesome/css/font-awesome.min.css';
 import store from './Components/Redux/store';
 import { Provider } from 'react-redux';
+import 'animate.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

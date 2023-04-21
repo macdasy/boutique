@@ -8,8 +8,9 @@ import {
 import Home from '../Components/Home/Home';
 import CollectionsPage from '../Components/Collections/CollectionsPage';
 import Admin from '../Components/Admin/Admin';
-import Wishlist from '../Components/Bag/Wishlist';
 import Cart from '../Components/Bag/Cart';
+import Contact from '../Components/Contact/Contact';
+import Extras from '../Components/Extras/Extras';
 
 
 function App() {
@@ -18,10 +19,11 @@ function App() {
      <Router>
         <Routes>
             <Route exact path="/" element={<Home /> }/>
-            <Route exact path="/favourites" element={<Wishlist /> }/>
+            <Route exact path="/contact" element={<Contact /> }/>
             <Route exact path="/cart" element={<Cart /> }/>
             <Route exact path="/collections" element={<CollectionsPage /> }/>
             <Route exact path="/admin" element={<Admin /> }/>
+            <Route exact path="/policy" element={<Extras /> }/>
         </Routes>
       </Router>
     </div>

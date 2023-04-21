@@ -5,7 +5,7 @@ export default function Secondary(props){
 
     return(
         <section id='secondary' data-uk-scrollspy="cls: uk-animation-fade; target: #sec-data; delay: 500;">
-            <div style={{display:'flex', justifyContent:'space-between' ,alignItems:'baseline'}}>
+            <div style={{display:'flex', justifyContent:'space-between' ,alignItems:'baseline', margin:'7% 5% auto'}}>
                 <h2> Today's Special </h2>
                 <div style={{ display:'flex', flexDirection:'column', textAlign:"center" }}>
                     <h2 id='td-name'> Hydri's Diuae </h2>

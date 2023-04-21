@@ -1,22 +1,20 @@
 
 import './Customers.css';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
 import StarIcon from '@mui/icons-material/Star';
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { Pagination } from 'swiper';
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode } from 'swiper';
 
 export default function Customers(props){
 
     return(
-        <section id='customers-section' 
-            data-uk-scrollspy="cls: uk-animation-fade; target: #cust-swipe; delay: 500;">
-            <h2 id='cust'> Our Happy Customers <hr></hr> </h2>
-        <Swiper
-            id='cust-swipe'
+            <Swiper
             slidesPerView={3}
             spaceBetween={30}
             freeMode={true}
@@ -38,9 +36,22 @@ export default function Customers(props){
                   spaceBetween: 50,
                 },
               }}
-            modules={[Pagination]}
+            modules={[FreeMode]}
             className="mySwiper"
-        >
+            >
+            <SwiperSlide>
+
+                <div className='swipeCard'>
+                    <p className='rating'> <StarIcon/> <StarIcon/>  <StarIcon/>  <StarIcon/> </p>
+                    <p className='comment'> 
+                        "Imbibed deep within the roots of the early block printing history, 
+                        melded with contemporary influences of Night and Daywear, the vision 
+                        of Papaya Whims comes alive.of Papaya Whims comes alive.of Papaya Whim"
+                    </p>
+                    <p className='customer'> - Someone </p>
+                </div>
+
+            </SwiperSlide>
             <SwiperSlide>
 
                 <div className='swipeCard'>
@@ -77,7 +88,6 @@ export default function Customers(props){
                 </div>
             </SwiperSlide>
         </Swiper>
-        </section>
     )
 
 }

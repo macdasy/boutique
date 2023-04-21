@@ -1,0 +1,30 @@
+
+
+
+
+#contact-page{
+    padding: 10vh 5vh;
+}
+
+#contact-page h2{
+    font-family: 'Josefin Sans';
+}
+
+
+#form-contact{
+    margin: auto;
+}
+
+#form-contact input:active, #form-contact input:focus, #form-contact textarea:active, #form-contact textarea:focus{
+    border-color: #B4C484 !important;
+}
+
+.contact-submit{
+    text-transform: capitalize;
+    background:  #7d875f;
+    color: white;
+    padding: 0% 3%;
+    display: block;
+    margin: auto;
+    font-family: 'Schibsted Grotesk', sans-serif;
+}

@@ -49,13 +49,13 @@
     width: 100%;
     margin-bottom: 3%;
     text-transform: none;
-    border-color: orange;
+    border-color: #7d875f;
     font-size: medium;
     font-family: 'Josefin Sans';
 }
 
 #tocart{
-    color: orange;
+    color: #7d875f;
 }
 
 #tocart:hover{
@@ -65,7 +65,7 @@
 
 #buynow{
     color: white;
-    background: orange;
+    background: #7d875f;
     transition: all 0.7s;
 }
 

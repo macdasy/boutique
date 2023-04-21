@@ -92,3 +92,52 @@
 .MuiCardHeader-title{
     font-family: 'Josefin Sans' !important;
 }
+
+
+#filters{
+    margin-bottom: 3%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+#type-btn{
+    text-transform: capitalize;
+    font-family: 'Schibsted Grotesk', sans-serif;
+}
+
+#f-icon{
+    color: black;
+}
+
+#f-icon:hover{
+    color: #7d875f;
+}
+
+.uk-checkbox:checked{
+
+    background: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D…205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A') #7d875f;
+
+    background-color: #7d875f;
+    color: white;
+    /* border-color: #7d875f !important; */
+}
+
+.uk-checkbox:checked:active, .uk-checkbox:checked:focus{
+    background: #7d875f !important;
+    color: white;
+    border-color: #7d875f;
+}
+
+.uk-checkbox:focus{
+    border-color: grey !important;
+}
+
+#applybtn{
+    display: block;
+    margin-left: auto;
+    background: #7d875f;
+    text-transform: capitalize;
+    font-family: 'Schibsted Grotesk', sans-serif;
+}

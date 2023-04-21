@@ -8,8 +8,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import './procard.css';
 import Suggestion from './Suggestions';
-import ProFooter from './ProFooter';
-
+import Footer from '../../Footer/Footer';
 
 export default function ProModal(props) {
 
@@ -72,8 +71,8 @@ export default function ProModal(props) {
                     <Grid item xs={12} md={6}>
                       <div>
                         <h1 style={{ fontFamily:'Josefin Sans', fontSize:'4em' }}> Onefir Requima </h1>
-                        <p style={{ fontSize:'2em', color:'orange', marginBottom:0, fontFamily:'Josefin Sans'}}> Rs.2599 </p> 
-                        <p style={{ fontSize:"small", fontFamily:'Josefin Sans', marginTop:0}}> <span style={{ color:'orange', borderBottom:'1px orange solid' }}>shipping</span> amount varies. </p>
+                        <p style={{ fontSize:'2em', color:'#7d875f', marginBottom:0, fontFamily:'Josefin Sans'}}> Rs.2599 </p> 
+                        <p style={{ fontSize:"small", fontFamily:'Josefin Sans', marginTop:0}}> <span style={{ color:'#7d875f', borderBottom:'1px #7d875f solid' }}>shipping</span> amount varies. </p>
                         <p style={{ fontSize:'1.5em', color:"black", fontFamily:'Josefin Sans', marginTop:"10%" ,marginBottom:'1%'}}> Quantity </p>
                         <ButtonGroup variant="contained" aria-label="outlined primary button group" style={{borderRadius:0}}>
                           <Button variant="text" onClick={decreaseQ} style={{ background:"none", color:'black', border:'none'}}><span style={{width:'50%'}} uk-icon="minus"></span></Button>
@@ -95,7 +94,7 @@ export default function ProModal(props) {
                 </Box>
                 <Suggestion />
 
-                <ProFooter />
+                <Footer />
             </DialogContentText>
             </DialogContent>
         </Dialog>

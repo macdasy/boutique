@@ -1,6 +1,5 @@
 
 #secondary h2:not(#td-name){
-    margin-left: 5%;
     border-bottom: #000000 0.8px solid;
     display: inline-block;
     font-family: 'Josefin Sans', sans-serif;
@@ -16,6 +15,7 @@
 }
 
 #secondary #td-price{
+    color: #7d875f;
     margin-top: 0;
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -37,9 +37,18 @@
 
 #sec-img-cont{
     overflow: hidden;
+    position: relative;
     -moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+#sec-img-cont:hover img{
+    -ms-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 #sec-img-cont img{
@@ -69,4 +78,9 @@
     height: 100%;
     background-repeat: no-repeat !important;
     background-size: 100% auto !important;
+    transition: all 0.3s;
+}
+
+#gal-2:hover, #gal-3:hover{
+    background-size: 102% auto !important;
 }
