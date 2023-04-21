@@ -13,6 +13,15 @@
     padding: 2%5%;
 }
 
+p#welcome{
+    margin: 0;
+    color:  #7d875f;
+    padding-bottom: 1%;
+    border-bottom: #00000012 solid 0.1px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 #brand{
     font-size: 3em;
     color: #000;

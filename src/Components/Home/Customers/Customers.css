@@ -1,8 +1,7 @@
 
 
 #customers-section{
-    padding: 12% 7% 5%;
-
+    padding: 5% 7% 5%;
     /* background: url('./bg.png');
     background-repeat: no-repeat;
     background-position:bottom;
@@ -10,16 +9,19 @@
     background-position-y: bottom; */
 }
 
-h2#cust{
-    font-family: 'Josefin Sans', sans-serif;
+h4#cust{
+    color: #8e996b;
+    border-bottom: #8e996b 0.8px solid;
+    display: inline-block;
     letter-spacing: 2px;
-    text-transform: uppercase;
     text-align: center !important;
+    font-family: 'Josefin Sans';
+    font-size: 1.7em;
 }
 
 h2#cust hr{
     margin: auto !important;
-    border-top: 2px solid #7d875f;
+    border-top: #8e996b 0.8px solid;
     width: 20%;
 }
 
@@ -35,11 +37,11 @@ p.rating{
 
 p.comment{
     font-size: medium;
-    font-family: "Tilt Neon", cursive;
+    font-family: 'Schibsted Grotesk', sans-serif;
 }
 
 p.customer{
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Josefin Sans';
 }
 
 .swiper {

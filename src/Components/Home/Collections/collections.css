@@ -5,9 +5,14 @@
     padding: 1% 5% 5%;
 }
 
+p#welcome{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
 
 h4#collections{
-    border-bottom: #000000 0.8px solid;
+    color: #8e996b;
+    border-bottom: #8e996b 0.8px solid;
     display: inline-block;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.7em;

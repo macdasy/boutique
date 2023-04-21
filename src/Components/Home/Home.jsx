@@ -21,7 +21,7 @@ export default function Home(prpos){
             <Collections />
             <Secondary />
              <section id='customers-section' data-uk-scrollspy="cls: uk-animation-fade; target: .swipeCard; delay: 500;">
-                <h2 id='cust'> Our Happy Customers <hr></hr> </h2>
+                <h4 id='cust'> Our Happy Customers </h4>
                 <Customers />
             </section>
             <Footer />

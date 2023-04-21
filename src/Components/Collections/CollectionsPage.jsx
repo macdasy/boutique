@@ -37,14 +37,16 @@ export default function CollectionsPage() {
         <CheckmarkSelect />
         <Menu/>
       </div> */}
+          <p id='welcome'> Welcome to the world of Urja </p>  
 
     <div style={{padding:'5%5%1%'}}>
           <div id='filters' onClick={console.log('clicked')}>
             <h2 
             style={{ fontFamily:'Josefin Sans',     
-                      borderBottom: '#000000 0.8px solid',
+                      borderBottom: '#7d875f 0.8px solid',
                       display: 'inline-block',
-                      fontSize: '1.7em' 
+                      fontSize: '1.7em' ,
+                      color:  '#8e996b'
                   }}>  Collections </h2>
             <div>
               <button className="uk-button uk-button-link" id='type-btn' type="button"> <a id='f-icon' href="" uk-icon="icon:settings"></a> </button>

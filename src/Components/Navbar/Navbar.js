@@ -78,7 +78,7 @@ export default function Navbar(props) {
               </Box>
 
             <Box sx={{ margin: { xs: 'auto', sm:'0', md:'0' } }} >
-              <img src={logo} alt='' style={{ width:'10vh' }} />
+              <img src={logo} alt='' style={{ width:'8vh' }} />
             </Box>
 
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
