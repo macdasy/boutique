@@ -44,7 +44,7 @@ export default function ProModal(props) {
             scroll={'paper'}
             fullScreen
         >
-            <div style={{ display:'flex', justifyContent:'end' }}>
+            <div style={{ display:'flex', justifyContent:'end', background:"transparent" }}>
 
               <IconButton
                 edge="start"
@@ -55,8 +55,9 @@ export default function ProModal(props) {
                 <CloseIcon />
               </IconButton>
             </div>
-            <DialogContent style={{ padding:"5%" }}>
+            <DialogContent  style={{padding:0}}>
             <DialogContentText
+                style={{ padding:"5%" }}
                 id="scroll-dialog-description"
                 ref={descriptionElementRef}
                 tabIndex={-1}
@@ -94,8 +95,8 @@ export default function ProModal(props) {
                 </Box>
                 <Suggestion />
 
-                <Footer />
             </DialogContentText>
+              <Footer />
             </DialogContent>
         </Dialog>
     </div>

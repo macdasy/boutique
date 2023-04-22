@@ -1,8 +1,4 @@
 
-import Grid from '@mui/material/Grid';
-import { Facebook, Instagram, WhatsApp } from '@mui/icons-material';
-import IconButton from '@mui/material/IconButton';
-
 import logo from '../../Stacks/logo.png';
 import './footer.css';
 
@@ -10,9 +6,9 @@ export default function Footer(props){
 
     return(
         <div id='footer'>
-              <div id='joinus' style={{textAlign:'center', marginBottom:"9%"}} >
-                <h2 style={{ fontFamily:'Schibsted Grotesk', marginBottom:'1%'}}> Admire the world with Urja </h2>
-                <h4 style={{ marginTop:0, marginBottom:'4%' }} > Join us and start attracting! </h4>
+              <div id='joinus' style={{textAlign:'center', marginBottom:"15vh"}} >
+                <h2 style={{ fontFamily:'Schibsted Grotesk', marginBottom:'1%', whiteSpace:"nowrap"}}> Admire the world with Urja </h2>
+                <h4 style={{ marginTop:0, marginBottom:'4vh', opacity:'0.7', fontFamily:'Schibsted Grotesk' }} > Join us and start attracting! </h4>
                 <button className='uk-button uk-button-secondary' style={{ textTransform:'none', fontFamily:'Schibsted Grotesk' }}> Shop Now </button>
               </div>
 
@@ -88,7 +84,7 @@ export default function Footer(props){
                   </div>
                 </div>
 
-                <div style={{textAlign:'center', padding:'1%'}}>
+                <div style={{textAlign:'center', padding:'3vh'}}>
                     <p style={{ fontSize:"small", marginBottom:0, color:'grey', fontFamily:'Schibsted Grotesk'}}> &#169;2023, Urja - The Dying Studio. </p>
                 </div>
 
