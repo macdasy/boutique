@@ -1,4 +1,75 @@
 
 #footer{
-    padding: 4% 7% 2%;
+    background: #ecf4da;
+}
+
+#joinus{
+    padding: 5% 20% 2%;
+}
+
+
+#atagcont{
+    /* text-align: left; */
+}
+
+#foo-sec .uk-nav>li>a {
+    white-space: nowrap;
+    transition: all 0.5s;
+}
+
+.foo-link-sec .uk-active{
+    font-size: medium;
+    font-family: 'Schibsted Grotesk';
+}
+
+#foo-contact{
+    font-size: medium;
+    padding: 2% 10%;
+    border-bottom: 1px solid white;
+}
+
+.foo-link-sec{
+    padding-left: 5%;
+    font-family: 'Schibsted Grotesk';
+}
+
+.foo-cont-sec{
+    /* text-align: center; */
+    justify-content: space-between;
+}
+
+#foo-icon-sec a{
+    background: #7d875f3e;
+    color: white;
+    transition: all 0.3s;
+}
+
+#foo-icon-sec a:hover{
+    background: #7d875f66;
+
+}
+
+.foo-mail{
+    font-family: 'Schibsted Grotesk';
+}
+
+.foo-mail-1{
+    font-family: 'Schibsted Grotesk';
+    color:grey;
+}
+
+
+
+@media (max-width:640px) {
+    .foo-mail, .foo-mail-1{
+        justify-content: center;
+    }
+}
+
+
+@media (min-width:640px) {
+    #foo-icon-sec{
+        text-align: end;
+    }
+    
 }

@@ -18,9 +18,15 @@
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-clip: content-box;
+    transition: 0.3s all;
 
 }
 
+#lander:hover{
+    -moz-transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+}
 
 #land-btn{
     border-radius: 0px !important;
