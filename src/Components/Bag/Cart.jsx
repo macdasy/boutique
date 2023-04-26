@@ -87,7 +87,7 @@ export default function Cart(props) {
                                                 <Button variant="text" disableRipple onClick={()=>{ dispatch(addToCart({id:d.id} )) }}  style={{ background:"none", color:'black', border:'none', borderRadius:0}}><span style={{width:'50%'}} uk-icon="plus"></span></Button>
                                             </ButtonGroup>
                                             <button className="uk-button uk-button-secondary" 
-                                                onClick={deleteFromCart}
+                                                onClick={()=>{ dispatch(removeFromCart({id:d.id} )) }}
                                                 style={{ width:'100%', marginTop:'5%', textTransform:"none", fontFamily:"Schibsted Grotesk"}}> Remove </button>
                                         </div>
                                     </Box>
