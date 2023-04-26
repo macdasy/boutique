@@ -1,8 +1,7 @@
 import * as React from 'react';
 import Snackbar from '@mui/material/Snackbar';
-import { Fade, Slide, SnackbarContent } from '@mui/material';
+import { Button, Fade, Slide, SnackbarContent } from '@mui/material';
 import './procard.css';
-import { Button } from 'uikit-react';
 
 export default function SnackBar(props) {
 

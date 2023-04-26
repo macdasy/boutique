@@ -3,7 +3,7 @@ import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import { Button, ButtonGroup, Chip, DialogContentText, Slide } from '@mui/material';
+import { Button, Chip, DialogContentText } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import './procard.css';
