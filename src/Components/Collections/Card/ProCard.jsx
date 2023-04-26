@@ -4,12 +4,17 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import ProModal from './ProModal';
 import { useEffect, useState } from 'react';
 
+import {addToCart} from "../../../Slices/cartSlice";
+import { useDispatch, useSelector } from 'react-redux';
+import SnackBar from './Snackbar';
+
+
 export default function ProCard(props){
 
     const name = props.title;
     const price = props.price;
     const img = props.img;
-    const handleFav = props.handleFav;
+    const size = props.size;
 
     const [open, setOpen] = useState(false);
 
@@ -17,6 +22,22 @@ export default function ProCard(props){
     const handleClose = () => { setOpen(false) };    
 
     useEffect(()=>{ console.log(open) })
+
+    const product = {
+        id: props.id,
+        img: props.img,
+        price: props.price,
+        name:props.title
+    };
+
+    const [openCart, handleSnack] = useState(false);
+    const closeSnack = () => handleSnack(false);
+
+    const dispatch = useDispatch();
+    const handleAddToCart = () => {
+        handleSnack(true);
+        dispatch(addToCart(product));
+    };
 
     return(
         <section id="pro-card">
@@ -32,14 +53,14 @@ export default function ProCard(props){
                         <p style={{ color:'#7d875f', fontFamily:'Josefin Sans', marginTop:0 }}> Rs. {price} </p>  
                     </div>
                     <ul class="uk-iconnav">
-                        <li><a style={{color:'black'}} onClick={handleFav} data-uk-icon="icon: bag"></a></li>
-                        <li><a style={{color:'black'}} uk-icon="icon: social"></a></li>
+                        <li><a style={{color:'black'}} onClick={handleAddToCart} data-uk-icon="icon: bag"></a></li>
                     </ul>
                 </div>
             </div>
 
-            { open && <ProModal img={props.img} open={open}  handleClose={handleClose} /> }
-
+            { open && <ProModal size={size}  title={name} img={props.img} open={open}  handleClose={handleClose} /> }
+            <SnackBar open={openCart} closeSnack={closeSnack} img={img} title={props.title}  />
+            
         </section>
     )
 

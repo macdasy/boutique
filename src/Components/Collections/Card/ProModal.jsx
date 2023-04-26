@@ -3,17 +3,30 @@ import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import { Button, ButtonGroup, DialogContentText } from '@mui/material';
+import { Button, ButtonGroup, Chip, DialogContentText, Slide } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import './procard.css';
 import Suggestion from './Suggestions';
 import Footer from '../../Footer/Footer';
+import SnackBar from './Snackbar';
+import {
+  addToCart
+} from "../../../Slices/cartSlice";
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function ProModal(props) {
 
+  // cart section
+  const product = {
+    id:props.id,
+    img: props.img,
+    price: props.price,
+    name:props.title
+  };
 
-//   const [open, setOpen] = React.useState( props.open ? props.open : false );
+  const { items: products, state } = useSelector((state) => state.products);
+  const dispatch = useDispatch();
 
   const handleClose = () => {
     props.handleClose(false);
@@ -30,11 +43,15 @@ export default function ProModal(props) {
   }, [props.open]);
 
 
-  const [quantity, setQuant] = React.useState(1);
   const img = props.img;
 
-  function increaseQ(){setQuant(quantity+1);}
-  function decreaseQ(){setQuant(quantity-1);}
+  const [openCart, handleSnack] = React.useState(false);
+  const closeSnack = () => handleSnack(false);
+
+  const handleCart = () =>{
+    handleSnack(true);
+    dispatch(addToCart(product));
+  }
 
   return (
     <div>
@@ -71,20 +88,20 @@ export default function ProModal(props) {
                     </Grid>
                     <Grid item xs={12} md={6}>
                       <div>
-                        <h1 style={{ fontFamily:'Josefin Sans', fontSize:'4em' }}> Onefir Requima </h1>
+                        <h1 style={{ fontFamily:'Josefin Sans', fontSize:'4em' }}> {props.title} </h1>
                         <p style={{ fontSize:'2em', color:'#7d875f', marginBottom:0, fontFamily:'Josefin Sans'}}> Rs.2599 </p> 
                         <p style={{ fontSize:"small", fontFamily:'Josefin Sans', marginTop:0}}> <span style={{ color:'#7d875f', borderBottom:'1px #7d875f solid' }}>shipping</span> amount varies. </p>
-                        <p style={{ fontSize:'1.5em', color:"black", fontFamily:'Josefin Sans', marginTop:"10%" ,marginBottom:'1%'}}> Quantity </p>
-                        <ButtonGroup variant="contained" aria-label="outlined primary button group" style={{borderRadius:0}}>
-                          <Button variant="text" onClick={decreaseQ} style={{ background:"none", color:'black', border:'none'}}><span style={{width:'50%'}} uk-icon="minus"></span></Button>
-                          <Button variant="text" disabled style={{ color:'black', border:'none'}}> {quantity} </Button>
-                          <Button variant="text" onClick={increaseQ}  style={{ background:"none", color:'black', border:'none', borderRadius:0}}><span style={{width:'50%'}} uk-icon="plus"></span></Button>
-                        </ButtonGroup>
+                      </div>
+
+                      <div>
+                        <h4 style={{ fontFamily:'Josefin Sans', marginTop:'7%' }} > Available Sizes </h4>
+                         <Chip label={props.size} variant="outlined"/>
                       </div>
 
                       <div className='btn-cont'>
                         <Button id='buynow' variant='outlined'> Buy Now </Button>
-                        <Button id='tocart' variant='outlined'> Add to Cart </Button>
+                        {/* <Button id='tocart' variant='outlined' onClick={handleAddToCart(props)} > Add to Cart </Button> */}
+                        <Button id='tocart' variant='outlined' onClick={handleCart} > Add to Cart </Button>
                       </div>
 
                       <p>
@@ -92,6 +109,7 @@ export default function ProModal(props) {
                       </p>
                     </Grid>
                   </Grid>
+                  <SnackBar open={openCart} closeSnack={closeSnack} img={img} title={props.title}  />
                 </Box>
                 <Suggestion />
 

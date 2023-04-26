@@ -3,9 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App/App';
 import 'font-awesome/css/font-awesome.min.css';
-import store from './Components/Redux/store';
 import { Provider } from 'react-redux';
 import 'animate.css';
+
+
+import { configureStore } from "@reduxjs/toolkit";
+import productsReducer, { productsFetch } from "./Slices/productsSlice";
+import cartReducer, { getTotals } from "./Slices/cartSlice";
+import { productsApi } from "./Slices/productsApi";
+
+const store = configureStore({
+  reducer: {
+    products: productsReducer,
+    cart: cartReducer,
+    [productsApi.reducerPath]: productsApi.reducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(productsApi.middleware),
+});
+
+store.dispatch(productsFetch());
+store.dispatch(getTotals());
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,5 +32,6 @@ root.render(
     <Provider store={store}>
       <App />
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById("root")
 );

@@ -89,13 +89,13 @@ export default function Navbar(props) {
             </>
 
             <Box sx={{ display: { xs: 'flex', sm:'none', md: 'none' }, gap:"20px" }}>
-              <a href="" class="uk-icon-link" data-uk-icon="info"></a>
-              <a href="" class="uk-icon-link" data-uk-icon="bag"></a>
+              <a href="/policy" class="uk-icon-link" data-uk-icon="info"></a>
+              <a href="/cart" class="uk-icon-link" data-uk-icon="bag"></a>
             </Box>
 
             <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap:"20px" }}>
-              <a href="" className="uk-icon-link act-btn" data-uk-icon="info"></a>
-              <a href="" className="uk-icon-link act-btn" data-uk-icon="bag"></a>
+              <a href="/policy" className="uk-icon-link act-btn" data-uk-icon="info"></a>
+              <a href="/cart" className="uk-icon-link act-btn" data-uk-icon="bag"></a>
             </Box>
 
           </Toolbar>

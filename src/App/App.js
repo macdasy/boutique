@@ -11,9 +11,12 @@ import Admin from '../Components/Admin/Admin';
 import Cart from '../Components/Bag/Cart';
 import Contact from '../Components/Contact/Contact';
 import Extras from '../Components/Extras/Extras';
+import BuyNow from '../Components/BuyNow/BuyNow';
+// import { useEffect, useState } from 'react';
 
 
 function App() {
+
   return (
     <div className="App">
      <Router>
@@ -24,6 +27,7 @@ function App() {
             <Route exact path="/collections" element={<CollectionsPage /> }/>
             <Route exact path="/admin" element={<Admin /> }/>
             <Route exact path="/policy" element={<Extras /> }/>
+            <Route exact path="/buynow" element={<BuyNow /> }/>
         </Routes>
       </Router>
     </div>

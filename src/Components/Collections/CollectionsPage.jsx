@@ -1,18 +1,8 @@
-
-import { Button } from '@mui/material';
 import { useState } from 'react';
 import './CollectionsPage.css';
-import ColorSelection from './Filters/ColorSelection';
-import Menu from './MobileMenu';
 import Products from './Card/Products';
-import CheckmarkSelect from './Filters/Select1';
-import ChipSelection from './Filters/Select2';
-import CollecNav from './CollNav';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
-
-const sizes = ['s', 'm', 'l', 'xl', 'xxl'];
-const colors = ['black', 'blue', 'yellow', 'green', 'white'];
 
 
 export default function CollectionsPage() {

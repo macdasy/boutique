@@ -1,4 +1,7 @@
 
+.css-1exqwzz-MuiSnackbarContent-message{
+    padding: 0 !important;
+}
 
 #bot-wrap{
     margin-top: 5%;
@@ -60,7 +63,8 @@
 
 #tocart:hover{
     background: none;
-    border-width: 2px;
+    color: #4d533b;
+    border-color: #4d533b;
 }
 
 #buynow{

@@ -1,29 +1,16 @@
 
-
-#wishlist{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+#cart-sec{
+    padding: 5% 7%;
+    margin-bottom: 5%;
 }
 
-#wishlist a{
-    display: block;
+#cart-pro-name, #cart-pro-price{
+    margin: 0;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    margin-bottom: 5%;
 }
 
-#w-shop, #w-cart{
-    text-transform: none;
-    background: orange;
-    color: black;
-    padding: 10% 6%;
-    border-radius: 1px;
-    height: fit-content;
-    font-family: 'Tilt Neon', cursive;
-}
-
-
-#w-cart{
-    color: orange;
-    background: black;
+#cart-pro-price{
+    font-family: 'Schibsted Grotesk', sans-serif;
+    color:  #7d875f;
 }

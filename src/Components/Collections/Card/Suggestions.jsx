@@ -8,9 +8,8 @@ export default function Suggestion(props){
 
     return(
         <section id="suggestions" style={{ marginTop:"5%", marginBottom:"5%" }}>
-
-            <h3 style={{ fontFamily:'Josefin Sans' }}> You might also like </h3>
-
+            
+            { !props.fromCart && <h3 style={{ fontFamily:'Josefin Sans' }}> You might also like </h3>  }
             <Box sx={{ width: '100%' }}>
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 2 }}>
                 <Grid item xs={6} md={3}>
@@ -30,6 +29,14 @@ export default function Suggestion(props){
             </Grid>
             </Box>
 
+            { props.fromCart &&   
+                <div style={{textAlign:'center',marginTop:'5vh'}}>
+                    <button className="uk-button uk-button-secondary" 
+                        onClick={ ()=>{alert('checked out!')} }
+                        style={{background:'#7d875f', fontSize:'medium', textTransform:"none", fontFamily:"Schibsted Grotesk"}}> View All 
+                    </button>
+                </div>
+            }
 
         </section>
     )
