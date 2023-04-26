@@ -36,7 +36,7 @@ export default function Navbar(props) {
   }
 
   const goToShop = (e) => {
-    if(nav!=='/collections') window.location.pathname = '/collections';
+    if(nav!=='/collections') window.location.pathname = '/shop';
   }
 
   const goToContact = (e) => {
@@ -63,7 +63,7 @@ export default function Navbar(props) {
                             <a href='.'> Home </a>
                           </li>
                           <li class="uk-active">
-                            <a href='/collections'> Collections </a>
+                            <a href='/shop'> Shop </a>
                           </li>
                           <li class="uk-active">
                             <a href='.'> About </a>
@@ -83,7 +83,7 @@ export default function Navbar(props) {
 
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 <Button disableRipple disableFocusRipple disableElevation disableTouchRipple onClick={goToHome} id='nav-btn' style={{ color: nav==='/' ? '#b0c17d' : 'grey' , textDecoration: nav==='/' ? 'underline' : 'none'  }} > Home </Button>
-                <Button disableRipple disableFocusRipple disableElevation disableTouchRipple onClick={goToShop} id='nav-btn' style={{ color: nav==='/collections' ? '#b0c17d' : 'grey' , textDecoration: nav==='/collections' ? 'underline' : 'none' }}  > Shop </Button>
+                <Button disableRipple disableFocusRipple disableElevation disableTouchRipple onClick={goToShop} id='nav-btn' style={{ color: nav==='/shop' ? '#b0c17d' : 'grey' , textDecoration: nav==='/shop' ? 'underline' : 'none' }}  > Shop </Button>
                 <Button disableRipple disableFocusRipple disableElevation disableTouchRipple onClick={goToContact} id='nav-btn' style={{ color: nav==='/contact' ? '#b0c17d' : 'grey' , textDecoration: nav==='/contact' ? 'underline' : 'none' }}  > Contact </Button>
             </Box>
             </>
