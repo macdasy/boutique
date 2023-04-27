@@ -19,8 +19,8 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props} style={{ color:'black' }} >
       {'Copyright © '}
-      <Link color="inherit" href=".">
-        Boutique
+      <Link style={{color:'blue'}} href=".">
+        Urja
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -125,13 +125,6 @@ export default function Admin() {
             >
               Sign In
             </Button>
-            <Grid container style={{ justifyContent:'end' }}>
-              <Grid item>
-                <Link href="#" variant="body2" style={{ color:'orange', textDecoration:'none' }}>
-                  {"Forgot Password?"}
-                </Link>
-              </Grid>
-            </Grid>
           </Box>
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />

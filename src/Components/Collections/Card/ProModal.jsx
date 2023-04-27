@@ -81,7 +81,7 @@ export default function ProModal(props) {
             >
                <Box style={{ width: '100%' }}>
                   <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 2, md: 10 }}>
-                    <Grid item xs={12} md={6} style={{justifyContent:'center', display:'flex', flexDirection:"column"}}>
+                    <Grid item xs={12} md={6} style={{justifyContent:'flex-start', display:'flex', flexDirection:"column"}}>
                       <div id='card-img-cont'>
                         <img src={img} alt=''/>
                       </div>
@@ -89,7 +89,7 @@ export default function ProModal(props) {
                     <Grid item xs={12} md={6}>
                       <div>
                         <h1 style={{ fontFamily:'Josefin Sans', fontSize:'4em' }}> {props.title} </h1>
-                        <p style={{ fontSize:'2em', color:'#7d875f', marginBottom:0, fontFamily:'Josefin Sans'}}> Rs.2599 </p> 
+                        <p style={{ fontSize:'2em', color:'#7d875f', marginBottom:0, fontFamily:'Josefin Sans'}}> Rs.{props.price} </p> 
                         <p style={{ fontSize:"small", fontFamily:'Josefin Sans', marginTop:0}}> <span style={{ color:'#7d875f', borderBottom:'1px #7d875f solid' }}>shipping</span> amount varies. </p>
                       </div>
 

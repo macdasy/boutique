@@ -13,10 +13,14 @@ import Contact from '../Components/Contact/Contact';
 import Extras from '../Components/Extras/Extras';
 import BuyNow from '../Components/BuyNow/BuyNow';
 import Shop from '../Components/Shop/Shop';
+import Policy from '../Components/Extras/Policy';
+import { useSelector } from 'react-redux';
 // import { useEffect, useState } from 'react';
 
 
 function App() {
+
+  const count = useSelector((state) => state.cart.cartTotalQuantity);
 
   return (
     <div className="App">
@@ -29,7 +33,7 @@ function App() {
             <Route exact path="/collections" element={<CollectionsPage /> }/>
             <Route exact path="/admin" element={<Admin /> }/>
             <Route exact path="/policy" element={<Extras /> }/>
-            <Route exact path="/buynow" element={<BuyNow /> }/>
+            { count && <Route exact path="/buynow" element={<BuyNow /> }/> }
         </Routes>
       </Router>
     </div>

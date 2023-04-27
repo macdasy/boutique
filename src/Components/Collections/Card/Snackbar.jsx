@@ -17,7 +17,7 @@ export default function SnackBar(props) {
     const action = (
             <div className="uk-card uk-card-default" style={{width:'inherit'}}>
                 <div className="uk-card-header">
-                        <p style={{color:'black', fontFamily:'Schibsted Grotesk'}} > <span uk-icon='icon: check'></span> Item added to cart.</p>
+                        <p style={{color:'black', fontFamily:'Schibsted Grotesk', textAlign:'left'}} > <span uk-icon='icon: check'></span> Item added to cart.</p>
                         <button onClick={handleClose} type="button" aria-label="Close" data-uk-close style={{color:'black',position:'absolute', top:'5px', right:'15px'}} />
 
                     <div className="uk-grid-small uk-flex-middle" data-uk-grid>
@@ -25,7 +25,7 @@ export default function SnackBar(props) {
                             <img width="40" height="40" src={props.img} alt="Avatar" />
                         </div>
                         <div className="uk-width-expand">
-                            <h3 className="uk-card-title uk-margin-remove-bottom" style={{fontFamily:'Josefin Sans'}} >{props.title}</h3>
+                            <h3 className="uk-card-title uk-margin-remove-bottom" style={{textAlign: "left",fontFamily:'Josefin Sans'}} >{props.title}</h3>
                         </div>
                     </div>
                 </div>

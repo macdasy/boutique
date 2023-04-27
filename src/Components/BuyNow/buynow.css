@@ -11,3 +11,45 @@
     /* border-radius: 9px; */
     padding: 5%;
 }
+
+div#check-amount{
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+div#check-amount div{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#check-total-amount{
+    display: flex;
+    justify-content: space-between;
+}
+
+div#check-amount div p{
+    font-family: 'Schibsted Grotesk', sans-serif;
+    margin: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+p#total, p#total-amout{
+    color: black;
+}
+
+p#total-amout{
+    font-size: x-large;
+    font-family: 'Josefin Sans' !important;
+}
+
+p.amount{
+    color: #000;
+    font-size: medium;
+    font-family: 'Josefin Sans' !important;
+}
+
+#checkout-btn{
+    text-transform: capitalize;
+}

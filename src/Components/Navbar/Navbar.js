@@ -4,11 +4,12 @@ import Toolbar from '@mui/material/Toolbar';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
-import { Button, Slide } from '@mui/material';
+import { Badge, Button, Slide } from '@mui/material';
 import './nav.css';
 
 import logo from '../../Stacks/logo.png';
-
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import { useDispatch, useSelector } from 'react-redux';
 function HideOnScroll(props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -43,6 +44,8 @@ export default function Navbar(props) {
     if(nav!=='/contact') window.location.pathname = '/contact';
   }
 
+  const count = useSelector((state) => state.cart.cartTotalQuantity);
+  console.log(count);
 
   return (
     <React.Fragment>
@@ -87,15 +90,23 @@ export default function Navbar(props) {
                 <Button disableRipple disableFocusRipple disableElevation disableTouchRipple onClick={goToContact} id='nav-btn' style={{ color: nav==='/contact' ? '#b0c17d' : 'grey' , textDecoration: nav==='/contact' ? 'underline' : 'none' }}  > Contact </Button>
             </Box>
             </>
-
-            <Box sx={{ display: { xs: 'flex', sm:'none', md: 'none' }, gap:"20px" }}>
-              <a href="/policy" class="uk-icon-link" data-uk-icon="info"></a>
-              <a href="/cart" class="uk-icon-link" data-uk-icon="bag"></a>
+    
+            <Box sx={{ display: { xs: 'flex', sm:'none', md: 'none' }, alignItems:'baseline', gap:"20px" }}>
+              <a href="/policy" class="uk-icon-link act-btn" data-uk-icon="info"></a>
+              <a href="/cart" className="uk-icon-link act-btn">
+                <Badge badgeContent={count} color="success">
+                  <ShoppingBagOutlinedIcon />
+                </Badge>
+              </a>
             </Box>
 
-            <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap:"20px" }}>
+            <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems:'baseline', gap:"20px" }}>
               <a href="/policy" className="uk-icon-link act-btn" data-uk-icon="info"></a>
-              <a href="/cart" className="uk-icon-link act-btn" data-uk-icon="bag"></a>
+              <a href="/cart" className="uk-icon-link act-btn">
+                <Badge badgeContent={count} color="success">
+                  <ShoppingBagOutlinedIcon />
+                </Badge>
+              </a>
             </Box>
 
           </Toolbar>

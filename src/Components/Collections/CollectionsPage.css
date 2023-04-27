@@ -1,18 +1,4 @@
 
-/* #cPage{} */
-
-.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
-    border-radius: 0px !important;
-}
-
-#cheader{
-    background-color: rgba(255, 255, 255, 0.504);
-    /* background-image: url("https://www.transparenttextures.com/patterns/arches.png"); */
-    color: gold;
-    text-align: center;
-    padding: 2%5%;
-}
-
 p#welcome{
     margin: 0;
     color:  #7d875f;
@@ -37,71 +23,9 @@ p#welcome{
     font-family: 'Josefin Sans';
 }
 
-
-#input-field{
-    padding: 3%;
-    display: flex;
-    justify-content: center;
-}
-
-#mobile{
-    display: none;
-}
-
-.MuiListItemText-primary, .MuiMenuItem-root{
-    font-family: 'Tilt Neon' !important;
-}
-
-@media (max-width:824px) {
-    #input-field{
-        display: none;
-    }
-}
-
-@media (max-width:824px) {
-    #mobile{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 5%;
-    }
-
-    #input-field-2{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-}
-
-#size-select{
-    border: #ffffff;
-}
-
-#color .MuiOutlinedInput-root{
-    width: fit-content !important;
-}
-
-
-.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected{
-    background: rgba(255, 221, 157, 0.304) !important;
-}
-
-.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected::after{
-    content: url('https://img.icons8.com/external-inkubators-basic-outline-inkubators/15/null/external-close-user-interface-inkubators-basic-outline-inkubators.png');
-    display: block;
-    position: absolute;
-    right: 0;
-    margin: 0 10px 0 0;
-}
-
 .size{
     background: #ffffff !important;
 }
-
-.MuiCardHeader-title{
-    font-family: 'Josefin Sans' !important;
-}
-
 
 #filters{
     margin-bottom: 3%;
@@ -124,29 +48,20 @@ p#welcome{
     color: #7d875f;
 }
 
-.uk-checkbox:checked{
-
-    background: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D…205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A') #7d875f;
-
-    background-color: #7d875f;
-    color: white;
-    /* border-color: #7d875f !important; */
+#f-color label, #f-size label{
+    cursor: pointer;
 }
 
-.uk-checkbox:checked:active, .uk-checkbox:checked:focus{
-    background: #7d875f !important;
-    color: white;
-    border-color: #7d875f;
-}
-
-.uk-checkbox:focus{
-    border-color: grey !important;
-}
 
 #applybtn{
     display: block;
+    cursor: pointer;
+    position: relative;
+    padding: 3% 7%;
     margin-left: auto;
-    background: #7d875f;
+    background: none;
+    border: 1px solid white;
+    color: #fff;
     text-transform: capitalize;
     font-family: 'Schibsted Grotesk', sans-serif;
 }

@@ -23,10 +23,22 @@ p.sub{
     margin-bottom: 0 !important;
 }
 
+p#f-note-p{
+    text-align: justify;
+}
+
 #e-cont p{
     padding: 2% 7%;
     line-height: 2;
     text-align: justify;
     font-family: 'Schibsted Grotesk', sans-serif;
     margin-bottom: 5%;
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    border-radius: 0px !important;
+}
+
+.css-1t4vnk2-MuiDialogContent-root {
+    padding: 0 !important;
 }

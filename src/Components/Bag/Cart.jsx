@@ -3,10 +3,9 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import Grid from '@mui/material/Grid';
 import { Box, Button, ButtonGroup } from "@mui/material";
-import { useState } from "react";
 import Suggestions from '../Collections/Card/Suggestions';
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, clearCart, decreaseCart, getTotals, removeFromCart } from "../../Slices/cartSlice";
+import { addToCart, clearCart, decreaseCart, removeFromCart } from "../../Slices/cartSlice";
 
 
 export default function Cart(props) {
@@ -41,7 +40,7 @@ export default function Cart(props) {
         { (count.length===0) ? ( 
             <Box sx={{ flexGrow: 1 }} style={{ margin:'auto', textAlign:'center', padding:"3%" }}>
                 <h1 style={{fontFamily:"Josefin Sans"}} > Your cart is empty </h1>  
-                <button onClick={()=>{ window.location.pathname='/collections' }} className="uk-button uk-button-secondary" style={{textTransform:"none", fontFamily:"Schibsted Grotesk"}}> Continue Shopping </button>
+                <button onClick={()=>{ window.location.pathname='/shop' }} className="uk-button uk-button-secondary" style={{textTransform:"none", fontFamily:"Schibsted Grotesk"}}> Continue Shopping </button>
             </Box> 
             ) : (
             <Box sx={{ flexGrow: 1 }}>
@@ -122,7 +121,7 @@ export default function Cart(props) {
                     <p style={{ marginBottom:'1%', fontSize:'medium', fontFamily:"Schibsted Grotesk" }}> Grand Total  <span style={{ paddingLeft:'1%', color:'#7d875f',fontSize:'x-large' }}>  Rs.{cartTotalAmount}  </span>  </p>
                     <p style={{ marginTop:0, marginBottom:'1%', fontSize:'small'}} > <span style={{textDecoration:'underline', color:'#7d875f', textDecorationColor:'#7d875f'}}>  shipping</span> charges will be calculated at the time of order placement. </p>
                     <button className="uk-button uk-button-secondary" 
-                        onClick={ ()=>{alert('checked out!')} }
+                        onClick={ ()=>{window.location.pathname='/buynow'} }
                         style={{ background:'#7d875f', fontSize:'medium', textTransform:"none", fontFamily:"Schibsted Grotesk"}}> Check out 
                     </button>
                 </Box>

@@ -11,9 +11,11 @@ import SnackBar from './Snackbar';
 
 export default function ProCard(props){
 
+
     const name = props.title;
     const price = props.price;
-    const img = props.img;
+    const minetype = 'img/png';
+    const img = `data:${minetype};base64,${props.img}`;
     const size = props.size;
 
     const [open, setOpen] = useState(false);
@@ -25,7 +27,7 @@ export default function ProCard(props){
 
     const product = {
         id: props.id,
-        img: props.img,
+        img: img,
         price: props.price,
         name:props.title
     };
@@ -39,6 +41,7 @@ export default function ProCard(props){
         dispatch(addToCart(product));
     };
 
+
     return(
         <section id="pro-card">
 
@@ -48,17 +51,17 @@ export default function ProCard(props){
                 </div>
 
                 <div id="bot-wrap">
-                    <div style={{ display:'flex', flexDirection:'column', alignItems:'start' }}>
+                    <div style={{ display:'flex', flexDirection:'column', alignItems:'start', cursor:'pointer' }} onClick={handleOpen}>
                         <h5 style={{ fontFamily:'Josefin Sans', marginBottom:0 }}> {name} </h5>
                         <p style={{ color:'#7d875f', fontFamily:'Josefin Sans', marginTop:0 }}> Rs. {price} </p>  
                     </div>
                     <ul class="uk-iconnav">
-                        <li><a style={{color:'black'}} onClick={handleAddToCart} data-uk-icon="icon: bag"></a></li>
+                        <li><a style={{color:'black', cursor:'pointer'}} onClick={handleAddToCart} data-uk-icon="icon: bag"></a></li>
                     </ul>
                 </div>
             </div>
 
-            { open && <ProModal size={size}  title={name} img={props.img} open={open}  handleClose={handleClose} /> }
+            { open && <ProModal size={size}  title={name} img={img} open={open} price={price} handleClose={handleClose} /> }
             <SnackBar open={openCart} closeSnack={closeSnack} img={img} title={props.title}  />
             
         </section>
