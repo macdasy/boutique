@@ -18,8 +18,14 @@
     font-family: 'Schibsted Grotesk', sans-serif;
 }
 
+.shop-card h3 span{ transition: all 0.8s; }
 
-.shop-grid .uk-card-media-top{
+.shop-card:hover h3 span{
+    padding-left: 3%;
+}
+
+
+.shop-grid .uk-card-media-top, .shop-grid .uk-card-media-top-2, .shop-grid .uk-card-media-top-3{
     position: relative;
     overflow: hidden;
     -moz-box-sizing: border-box;
@@ -27,7 +33,7 @@
 	box-sizing: border-box;
 }
 
-.shop-grid .uk-card-media-top, .shop-grid .uk-card-media-top-2, .shop-grid .uk-card-media-top-3{
+.shop-grid .uk-card-media-top div, .shop-grid .uk-card-media-top-2 div, .shop-grid .uk-card-media-top-3 div{
     height: 40vh;
     /* Center and scale the image nicely */
     background-position:center !important;
@@ -35,6 +41,12 @@
     background-size: cover !important;
     background-clip: content-box;
     transition: 0.3s all;
+}
+
+.shop-grid .uk-card-media-top, .shop-grid .uk-card-media-top-2, .shop-grid .uk-card-media-top-3{
+    cursor: pointer;
+    background-size: 100% auto !important;
+    transition: all 0.3s;
 }
 
 .shop-grid .uk-card-media-top{
@@ -51,9 +63,7 @@
 }
 
 .shop-grid .uk-card-media-top:hover, .shop-grid .uk-card-media-top-2:hover, .shop-grid .uk-card-media-top-3:hover{
-        -moz-transform: scale(1.01);
-        -webkit-transform: scale(1.01);
-        transform: scale(1.01);
+    background-size: 102% auto !important;
 }
 
 /* .shop-grid img{

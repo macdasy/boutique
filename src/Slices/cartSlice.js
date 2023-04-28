@@ -59,12 +59,12 @@ const cartSlice = createSlice({
           position: "bottom-left",
         });
       } else if (state.cartItems[itemIndex].cartQuantity === 1) {
+        state.cartTotalAmount -= state.cartItems[itemIndex].price;
         const nextCartItems = state.cartItems.filter(
           (item) => item.id !== action.payload.id
         );
 
         state.cartItems = nextCartItems;
-        state.cartTotalAmount -= action.payload.price;
         toast.error("Product removed from cart", {
           position: "bottom-left",
         });

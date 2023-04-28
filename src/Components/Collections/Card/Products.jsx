@@ -11,7 +11,7 @@ import ProCard from "./ProCard";
 export default function Products(props) {
 
   async function processData() {
-    const res = await fetch("https://boutique-scpw.onrender.com/products");
+    const res = await fetch("https://boutique-scpw.onrender.com/user/products");
     const data = await res.json();
     setData(data);
   }

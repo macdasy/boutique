@@ -6,6 +6,8 @@ import { Box, Button, ButtonGroup } from "@mui/material";
 import Suggestions from '../Collections/Card/Suggestions';
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, clearCart, decreaseCart, removeFromCart } from "../../Slices/cartSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 export default function Cart(props) {
@@ -81,14 +83,16 @@ export default function Cart(props) {
                                         <h6> Quantity </h6>
                                         <div>
                                             <ButtonGroup variant="contained" aria-label="outlined primary button group" style={{ width:'100%', justifyContent: 'space-around', borderRadius:0}}>
-                                                <Button variant="text" disableRipple onClick={()=>{ dispatch(decreaseCart({id:d.id} )) }} style={{ background:"none", color:'black', border:'none'}}><span style={{width:'50%'}} uk-icon="minus"></span></Button>
+                                                <Button variant="text" disableRipple onClick={()=>{ dispatch(decreaseCart({id:d.id})) }} style={{ background:"none", color:'black', border:'none'}}><span style={{width:'50%'}} uk-icon="minus"></span></Button>
                                                 <Button variant="text"  disabled style={{ color:'black', border:'none'}}> {d.cartQuantity} </Button>
                                                 <Button variant="text" disableRipple onClick={()=>{ dispatch(addToCart({id:d.id} )) }}  style={{ background:"none", color:'black', border:'none', borderRadius:0}}><span style={{width:'50%'}} uk-icon="plus"></span></Button>
                                             </ButtonGroup>
                                             <button className="uk-button uk-button-secondary" 
                                                 onClick={()=>{ dispatch(removeFromCart({id:d.id} )) }}
                                                 style={{ width:'100%', marginTop:'5%', textTransform:"none", fontFamily:"Schibsted Grotesk"}}> Remove </button>
+                                            
                                         </div>
+
                                     </Box>
                                 </div>
                             </div>
@@ -101,7 +105,7 @@ export default function Cart(props) {
                                 <ButtonGroup variant="contained" aria-label="outlined primary button group" style={{borderRadius:0}}>
                                 <Button variant="text" disableRipple onClick={()=>{ dispatch(decreaseCart({id:d.id})) }} style={{ background:"none", color:'black', border:'none'}}><span style={{width:'50%'}} uk-icon="minus"></span></Button>
                                 <Button variant="text"  disabled style={{ color:'black', border:'none'}}> {d.cartQuantity} </Button>
-                                <Button variant="text" disableRipple onClick={()=>{ dispatch(addToCart({id:d.id} )) }}  style={{ background:"none", color:'black', border:'none', borderRadius:0}}><span style={{width:'50%'}} uk-icon="plus"></span></Button>
+                                <Button variant="text" disableRipple onClick={()=>{ dispatch(addToCart({id:d.id} ));}}  style={{ background:"none", color:'black', border:'none', borderRadius:0}}><span style={{width:'50%'}} uk-icon="plus"></span></Button>
                                 </ButtonGroup>
                                 <span onClick={()=>{ dispatch(removeFromCart({id:d.id} )) }}  style={{marginLeft:"5%", cursor:'pointer'}} uk-icon="icon: trash"></span>
                             </div>

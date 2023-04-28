@@ -16,6 +16,11 @@ import Shop from '../Components/Shop/Shop';
 import Policy from '../Components/Extras/Policy';
 import { useSelector } from 'react-redux';
 // import { useEffect, useState } from 'react';
+import "react-toastify/dist/ReactToastify.css";
+import 'react-toastify/dist/ReactToastify.min.css';
+import Lost from '../Components/Lost/404';
+import RPay from '../Components/RazorPay/RazorPay';
+
 
 
 function App() {
@@ -34,6 +39,8 @@ function App() {
             <Route exact path="/admin" element={<Admin /> }/>
             <Route exact path="/policy" element={<Extras /> }/>
             { count && <Route exact path="/buynow" element={<BuyNow /> }/> }
+            <Route exact path="/pay" element={<RPay /> }/>
+            <Route exact path="*" element={<Lost /> }/>
         </Routes>
       </Router>
     </div>

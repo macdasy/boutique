@@ -19,7 +19,7 @@ export default function CheckOutCard(props){
                             <p style={{fontSize:'small', color:'grey'}} class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">XL</time></p>
                         </div>
                         <div>
-                            <p class="uk-margin-remove-bottom amount">Rs. {d.price}</p>
+                            <p class="uk-margin-remove-bottom amount"> <span style={{fontSize:'small'}}> {d.cartQuantity}x</span> Rs. {d.price}</p>
                         </div>
                     </div>
                 ))}
@@ -43,6 +43,10 @@ export default function CheckOutCard(props){
             </div>
             
             <div class="uk-card-footer" style={{textAlign:'center'}}>
+                { (!props.isSubmitted) && <p style={{fontSize:'small', marginTop:'2%', color:'grey', fontFamily:'Schibsted Grotesk'}}> Verify the address section first! </p> }  
+                { (props.isSubmitted) && <p style={{fontSize:'small', marginTop:'2%', color:'grey', fontFamily:'Schibsted Grotesk'}}> 
+                    Your address has been verified successfully and can't be edited for this order!
+                 </p> }  
                 <button disabled={!props.isSubmitted} id='checkout-btn' class="uk-button uk-button-secondary">Place Order</button>
             </div>
         </div>

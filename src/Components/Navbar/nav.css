@@ -38,6 +38,40 @@
   background-size: cover !important;
 }
 
+
+#lost{
+    height: 100vh;
+    background-image: url("https://cdn.dribbble.com/users/992274/screenshots/10188399/media/3811d78a8db7f6cb1b4fdeae8c7c8e45.jpg?compress=1&resize=768x576&vertical=top") !important;
+    background-position:top !important;
+    background-repeat: no-repeat !important;
+    background-size:calc(120vh - 10vh) !important;
+    background-clip: content-box;
+    transition: 0.3s all;
+}
+
+
+#lost-div{
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    padding: 5%;
+}
+
+@media (max-width:600px) {
+    #lost{
+        background-position:center !important;
+        background-size: 100% !important;
+    }
+    #lost-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5%;
+    }
+}  
+
 #appbar{
     background: #fffffff6;
 }
