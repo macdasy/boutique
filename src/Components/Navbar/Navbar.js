@@ -9,7 +9,9 @@ import './nav.css';
 
 import logo from '../../Stacks/logo.png';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { HashLink as Link } from 'react-router-hash-link';
+
 function HideOnScroll(props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -33,15 +35,18 @@ export default function Navbar(props) {
   console.log(nav);
 
   const goToHome = (e) => {
-    if(nav!=='/') window.location.pathname = '/';
+    if(nav!=='/') window.location.href = '.';
+    window.location.hash='';
   }
 
   const goToShop = (e) => {
-    if(nav!=='/collections') window.location.pathname = '/shop';
+    if(nav!=='/collections') window.location.href = '/shop';
+    window.location.hash='';
   }
 
   const goToContact = (e) => {
-    if(nav!=='/contact') window.location.pathname = '/contact';
+    if(nav!=='/contact') window.location.href = '/contact';
+    window.location.hash='';
   }
 
   const count = useSelector((state) => state.cart.cartTotalQuantity);
@@ -69,13 +74,13 @@ export default function Navbar(props) {
                             <a href='/shop'> Shop </a>
                           </li>
                           <li class="uk-active">
-                            <a href='.'> About </a>
+                            <a href='/policy'> About </a>
                           </li>
                           <li class="uk-nav-divider"></li>
                           <li class="uk-nav-header">Others</li>
-                          <li><a href="#"> Terms & Conditions </a></li>
-                          <li><a href="#"> Intructions </a></li>
-                          <li><a href="#"> Policy </a></li>
+                          <li><Link to="/policy#tnc"> Terms & Conditions </Link></li>
+                          <li><Link to="/policy#inst"> Intructions </Link></li>
+                          <li><Link to="/policy#rrp"> Policy </Link></li>
                       </ul>
                   </div>
               </Box>

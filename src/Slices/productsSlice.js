@@ -11,7 +11,7 @@ export const productsFetch = createAsyncThunk(
   async () => {
     try {
       const response = await axios.get(
-        "https://boutique-scpw.onrender.com/products"
+        "https://boutique-scpw.onrender.com/user/products"
       );
       return response.data;
     } catch (error) {

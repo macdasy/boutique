@@ -1,21 +1,18 @@
-import { Button, IconButton } from '@mui/material';
 import './procard.css';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ProModal from './ProModal';
 import { useEffect, useState } from 'react';
 
 import {addToCart} from "../../../Slices/cartSlice";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import SnackBar from './Snackbar';
 
 
 export default function ProCard(props){
 
-
     const name = props.title;
     const price = props.price;
     const minetype = 'img/png';
-    const img = `data:${minetype};base64,${props.img}`;
+    const img = props.ex_img ? props.ex_img : `data:${minetype};base64,${props.img}`;
     const size = props.size;
 
     const [open, setOpen] = useState(false);

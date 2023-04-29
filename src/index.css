@@ -28,3 +28,20 @@ html{
 a{
   text-decoration: none !important;
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7D875F;
+  border-radius: 999px;
+}

@@ -14,8 +14,10 @@ export default function Lander(props){
 
     return(
         <section id='lander' data-uk-scrollspy="cls: uk-animation-fade; target: #lander h2, #lander button; delay: 500;">
+           <div id='l-div'>
             <h2 style={{ fontFamily:'Josefin Sans', color:"white", fontSize:"7vh" }}> Find More divine clothes </h2> 
             <Button id='land-btn' variant='contained' onClick={scroll} > Shop Now </Button>
+           </div>
         </section>
     )
 

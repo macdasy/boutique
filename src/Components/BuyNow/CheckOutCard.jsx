@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import './buynow.css';
+import RPay from '../RazorPay/RazorPay';
 
 export default function CheckOutCard(props){
     const count = props.count;
@@ -42,12 +43,12 @@ export default function CheckOutCard(props){
                 </div> 
             </div>
             
-            <div class="uk-card-footer" style={{textAlign:'center'}}>
+            <div id='checkout-foo' class="uk-card-footer" style={{textAlign:'center'}}>
                 { (!props.isSubmitted) && <p style={{fontSize:'small', marginTop:'2%', color:'grey', fontFamily:'Schibsted Grotesk'}}> Verify the address section first! </p> }  
                 { (props.isSubmitted) && <p style={{fontSize:'small', marginTop:'2%', color:'grey', fontFamily:'Schibsted Grotesk'}}> 
                     Your address has been verified successfully and can't be edited for this order!
                  </p> }  
-                <button disabled={!props.isSubmitted} id='checkout-btn' class="uk-button uk-button-secondary">Place Order</button>
+                <RPay disabled={!props.isSubmitted} />
             </div>
         </div>
 

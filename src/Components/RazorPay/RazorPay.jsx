@@ -1,7 +1,17 @@
 import React from "react";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
-export default function RPay() {
+export default function RPay(props) {
+
+    const cartItems = useSelector((state) => state.cart.cartItems);
+    const itemIDs = [];
+
+    cartItems.forEach(element => {
+        for(let i=0; i<element.cartQuantity; i++) itemIDs.push(element.id);
+    });    
+
+    console.log(itemIDs);
 
     const paymentHandler = async (e) => {
         const API_URL = 'https://boutique-scpw.onrender.com/user/'
@@ -12,7 +22,7 @@ export default function RPay() {
             method: 'post',
             url: orderUrl,
             data: {
-              "productId":['64496558a099e229f22cf1c5', '64496554a099e229f22cf1c3', '64496554a099e229f22cf1c3', '64496554a099e229f22cf1c3']
+              "productId":itemIDs
             }
         });
         const { data } = response;
@@ -45,8 +55,8 @@ export default function RPay() {
 
     return (
       <div>
-        <button onClick={paymentHandler}>
-          Upgrade
+        <button onClick={paymentHandler} id='checkout-btn' disabled={props.disabled} className="uk-button uk-button-secondary">
+            Place Order
         </button>
       </div>
     );

@@ -239,7 +239,7 @@ export default function Extras(props){
                     </p>
                 </div>
 
-                <div>
+                <div id='rrp'>
                     <h3> 3. Return & Refund Policy </h3>
                     <hr/>
                     <p >
@@ -296,7 +296,7 @@ export default function Extras(props){
                     </p>
                 </div>
 
-                <div>
+                <div id='inst'>
                     <h3 id='f-note-h'> 5. Wash & Care Instructions </h3>
                     <hr />
                     <p id='f-note-p'>
@@ -319,7 +319,7 @@ export default function Extras(props){
                     </p>
                 </div>
 
-                <div>
+                <div id='tnc'>
                     <h3 id='f-note-h'> 6. Terms & Conditions </h3>
                     <hr />
                     <p id='f-note-p'>
