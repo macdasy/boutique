@@ -19,7 +19,7 @@ export default function Footer(props){
         <div id='footer'>
               <Policy open={open} handleClose={handleClose} tag={tag}/>
               <div id='joinus' style={{textAlign:'center', marginBottom:"15vh"}} >
-                <h2 style={{ fontFamily:'Schibsted Grotesk', marginBottom:'1%', whiteSpace:"nowrap"}}> Admire the world with Urja </h2>
+                <h2 style={{ fontFamily:'Schibsted Grotesk', marginBottom:'1%'}}> Admire the world with Urja </h2>
                 <h4 style={{ marginTop:0, marginBottom:'4vh', opacity:'0.7', fontFamily:'Schibsted Grotesk' }} > Join us and start attracting! </h4>
                 <button className='uk-button uk-button-secondary' style={{ textTransform:'none', fontFamily:'Schibsted Grotesk' }}> Shop Now </button>
               </div>
