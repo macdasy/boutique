@@ -92,6 +92,17 @@ export function AddItem(props) {
   }
 
   const AddItem = async(e) => {
+
+    console.log(img);
+
+    const postData = {
+      img: img,
+      category: value,
+      size: sizes,
+      price: prices,
+      color: personName
+    }
+
     Swal.fire({
         title: 'Ready to Upload?',
         showCancelButton: true,
@@ -99,16 +110,32 @@ export function AddItem(props) {
       }).then((result) => {
 
         if (result.isConfirmed) {
-            const formData = new FormData();
-            console.log(img);
-            formData.append("file", img);
-            formData.append("upload_preset", "sunnysvilla");
-            axios.post("https://api.Cloudinary.com/v1_1/dcrcuxd0v/image/upload", formData)
-                .then((res) => {
-                  console.log(res);
-                    var url = "/v"+res.data.version+"/"+res.data.public_id+".jpg";
-                    console.log(url);
-                })
+
+            const headers = {
+              'content-type': 'multipart/form-data',
+              'Authorization': localStorage.getItem('token')
+            }
+
+            axios.post("https://boutique-scpw.onrender.com/admin/addProduct", postData, {
+              headers: headers
+            })
+              .then((res) => {
+                console.log(res);
+              })
+              .catch((err) => {
+                console.log(err);
+              })
+
+            // const formData = new FormData();
+            // console.log(img);
+            // formData.append("file", img);
+            // formData.append("upload_preset", "sunnysvilla");
+            // axios.post("https://api.Cloudinary.com/v1_1/dcrcuxd0v/image/upload", formData)
+            //     .then((res) => {
+            //       console.log(res);
+            //         var url = "/v"+res.data.version+"/"+res.data.public_id+".jpg";
+            //         console.log(url);
+            //     })
       }});
     }
   
@@ -196,10 +223,12 @@ export function AddItem(props) {
                   style={{ marginLeft:0 }} 
                     type="number"
                     onChange={handlePrice}
-                    value={prices[`${size.toLowerCase()}`]}
+                    value={prices[size]}
+                    // value={prices[`${size.toLowerCase()}`]}
                     size="small"
                     label={size}
-                    id={size.toLowerCase()}
+                    id={size}
+                    // id={size.toLowerCase()}
                     sx={{ m: 1, width: '25ch' }}
                     autoComplete='off'
                     InputProps={{

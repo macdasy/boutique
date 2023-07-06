@@ -53,20 +53,10 @@ function useWindowSize() {
 
 export function AdminDashboard(props) {
   const [value, setValue] = useState(0);
-  const [sWidth, SetSWidth] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-
-  const vStyle= {
-    flexGrow: 1,
-    bgcolor: "background.paper",
-    display: "flex",
-    height: 224,
-  }
-
 
   console.log(useWindowSize());
 

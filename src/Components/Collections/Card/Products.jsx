@@ -42,12 +42,13 @@ export default function Products(props) {
                     <ProCard
                       id={d._id}
                       title={
-                        d.category === "1"
+                        d.category === "tops"
                           ? "Tops"
-                          : d.category === "2"
+                          : d.category === "Kurta"
                           ? "Kurta"
                           : "Kurta Set"
                       }
+                      color={d.color}
                       size={d.size}
                       price={d.price}
                       img={d.imgUrl}

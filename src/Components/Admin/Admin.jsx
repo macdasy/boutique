@@ -56,6 +56,8 @@ export default function Admin() {
 
         const res = await fetch(`https://boutique-scpw.onrender.com/admin/login`, requestOptions);
         const msg = await res.json();
+        localStorage.setItem('token', msg.token);
+        console.log(msg.token);
         console.log(msg.msg);
         console.log(msg.err);
 
