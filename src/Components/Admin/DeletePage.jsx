@@ -5,7 +5,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 import FolderIcon from '@mui/icons-material/Folder';
 import { useEffect, useState } from 'react';
-
+import axios from 'axios';
 import './Admin.css';
 import { Button } from '@mui/material';
 import Swal from 'sweetalert2';
@@ -16,6 +16,19 @@ export default function DeletePage(props) {
     const [secondary, setSecondary] = useState(false);
 
     const [items, setItems] = useState([]);
+
+
+    const [data, setData] = useState();
+    async function processData() {
+      const res = await fetch("https://boutique-scpw.onrender.com/user/products");
+      const data = await res.json();
+      setData(data);
+    }
+    
+    useEffect(() => {
+      if (!data) processData();
+      else console.log(data);
+    });
 
     const deleteItem = (e) => {
         const id= e.target.id;
@@ -44,6 +57,24 @@ export default function DeletePage(props) {
         denyButtonText: `Don't save`,
       }).then((result) => {
         if (result.isConfirmed) {
+
+          const headers = {
+            'content-type': 'multipart/form-data',
+            'Authorization': localStorage.getItem('token')
+          }
+
+          const postData = { id: items }
+
+          axios.post("https://boutique-scpw.onrender.com/admin/delete", postData, {
+              headers: headers
+            })
+              .then((res) => {
+                console.log(res);
+              })
+              .catch((err) => {
+                console.log(err);
+              })
+
           Swal.fire('Saved!', '', 'success')
         } else if (result.isDenied) {
           Swal.fire('Changes are not saved', '', 'info')
@@ -58,14 +89,14 @@ export default function DeletePage(props) {
         <section id='DeletePage'>
 
             <List dense={dense}>
-              {[0, 1, 2].map((e) => (
+              {data.map((d, index) => (
                 <ListItem
                     style={{ padding:'1% 2%' }}
-                    id={`image${e}`}
+                    id={d.id}
                     secondaryAction={
                         <>
-                          <button id={`image${e}`} className='itemBtn' onClick={deleteItem}> 
-                            <p style={{ padding:'2%', fontSize:'15px' }}  id={`image${e}`} > Delete </p> 
+                          <button id={d.id} className='itemBtn' onClick={deleteItem}> 
+                            <p style={{ padding:'2%', fontSize:'15px' }}  id={d.id} > Delete </p> 
                           </button>
                         </>
                     }

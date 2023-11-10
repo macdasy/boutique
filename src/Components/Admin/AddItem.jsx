@@ -4,8 +4,6 @@ import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import Chip from "@mui/material/Chip";
-import Autocomplete from '@mui/material/Autocomplete';
-import Stack from '@mui/material/Stack';
 import ImgUploader from "./ImageHandler/ImgUploader";
 import Swal from "sweetalert2";
 import axios from "axios";
@@ -42,7 +40,6 @@ function getStyles(name, personName, theme) {
 
 export function AddItem(props) {
   const [sizes, setSizes] = useState([]);
-  const [name, setName] = useState();
 
   const theme = useTheme();
   const [personName, setPersonName] = useState([]);
@@ -87,9 +84,7 @@ export function AddItem(props) {
 
   useEffect(()=> console.log(prices) )
 
-  function setImg(prop) {
-    sImg(prop);
-  }
+  function setImg(prop) { sImg(prop); }
 
   const AddItem = async(e) => {
 
@@ -121,6 +116,11 @@ export function AddItem(props) {
             })
               .then((res) => {
                 console.log(res);
+                sImg('')
+                setValue('')
+                setSizes('')
+                setprices('')
+                setPersonName('')
               })
               .catch((err) => {
                 console.log(err);
