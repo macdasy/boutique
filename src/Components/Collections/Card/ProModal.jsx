@@ -14,16 +14,9 @@ import {
   addToCart
 } from "../../../Slices/cartSlice";
 import { useDispatch, useSelector } from 'react-redux';
+import RPay from '../../RazorPay/RazorPay';
 
 export default function ProModal(props) {
-
-  // cart section
-  const product = {
-    id:props.id,
-    img: props.img,
-    price: props.price,
-    name:props.title
-  };
 
   const { items: products, state } = useSelector((state) => state.products);
   const dispatch = useDispatch();
@@ -48,7 +41,27 @@ export default function ProModal(props) {
   const [openCart, handleSnack] = React.useState(false);
   const closeSnack = () => handleSnack(false);
 
+
+  const [activeS, setAS] = React.useState(String(props.lSize));
+  // console.log(String(props.lSize));
+
+  function handleSizePrice(e) {
+    setAS( e.target.id || e.target.innerHTML );
+    // console.log (e.target.id ? e.target.id : e.target.innerHTML );
+  }
+
   const handleCart = () =>{
+
+    const product = {
+      id:props.id,
+      img: props.img,
+      price: props.price[activeS],
+      size: activeS,
+      name:props.title
+    };
+
+    console.log(product);
+
     handleSnack(true);
     dispatch(addToCart(product));
   }
@@ -57,7 +70,10 @@ export default function ProModal(props) {
   const price = props.price;
   const size  = props.size.sort((a,b) => sortBy.indexOf(a) - sortBy.indexOf(b)) ;
 
-  console.log(size);
+  // console.log(size);
+  // console.log(props.price[activeS]);
+  // console.log(props.price);
+  // console.log(activeS);
   // const price = {
   //   'S' : 1200,
   //   'M' : 1500,
@@ -65,15 +81,8 @@ export default function ProModal(props) {
   // }
   // const size = ['S','M','L'];
 
-  console.log(price, size);
+  // console.log(price, size);
 
-  const [activeS, setAS] = React.useState(String(props.lSize));
-  console.log(String(props.lSize));
-
-  function handleSizePrice(e) {
-    setAS( e.target.id || e.target.innerHTML );
-    console.log (e.target.id ? e.target.id : e.target.innerHTML );
-  }
 
   return (
     <div>
@@ -145,6 +154,8 @@ export default function ProModal(props) {
 
                       <div className='btn-cont'>
                         <Button id='buynow' variant='outlined'> Buy Now </Button>
+                        {/* <RPay /> */}
+                        
                         {/* <Button id='tocart' variant='outlined' onClick={handleAddToCart(props)} > Add to Cart </Button> */}
                         <Button id='tocart' variant='outlined' onClick={handleCart} > Add to Cart </Button>
                       </div>

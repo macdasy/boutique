@@ -13,6 +13,8 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+
+    // 
     addToCart(state, action) {
       localStorage.setItem('cartItems', JSON.stringify(action.payload));
       console.log(action.payload);
@@ -27,10 +29,8 @@ const cartSlice = createSlice({
           cartQuantity: state.cartItems[existingIndex].cartQuantity + 1,
         };
         console.log(state.cartItems[existingIndex]);
-        toast.info("Increased product quantity", {
-          position: "bottom-left",
-        });
-        state.cartTotalAmount += state.cartItems[existingIndex].price;
+       
+        state.cartTotalAmount += Number(state.cartItems[existingIndex].price);
 
       } else {
         let tempProductItem = { ...action.payload, cartQuantity: 1 };
@@ -45,6 +45,8 @@ const cartSlice = createSlice({
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
       state.cartTotalQuantity += 1;
     },
+
+    // 
     decreaseCart(state, action) {
       console.log(action.payload);
       const itemIndex = state.cartItems.findIndex(
@@ -72,6 +74,7 @@ const cartSlice = createSlice({
       state.cartTotalQuantity -= 1;
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
+    
     removeFromCart(state, action) {
       state.cartItems.map((cartItem) => {
         let count, price;

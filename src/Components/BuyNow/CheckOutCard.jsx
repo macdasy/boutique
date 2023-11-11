@@ -25,7 +25,6 @@ export default function CheckOutCard(props){
                     </div>
                 ))}
                 
-                
             </div>
             <div class="uk-card-body" id='check-amount'>
                 <div>

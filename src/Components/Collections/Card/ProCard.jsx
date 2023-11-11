@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import {addToCart} from "../../../Slices/cartSlice";
 import { useDispatch } from 'react-redux';
 import SnackBar from './Snackbar';
+import RPay from '../../RazorPay/RazorPay';
 
 
 export default function ProCard(props){
@@ -61,7 +62,7 @@ export default function ProCard(props){
                 </div>
             </div>
 
-            { open && <ProModal size={size}  title={name} img={img} open={open} price={price} color={props.color}
+            { open && <ProModal id={props.id} size={size}  title={name} img={img} open={open} price={price} color={props.color}
                                 lSize={ Object.keys(price).find( key => price[key] === String(Math.min(...allPrices))) } 
                                 handleClose={handleClose} 
                         /> }

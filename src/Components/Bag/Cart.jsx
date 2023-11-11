@@ -30,6 +30,8 @@ export default function Cart(props) {
     const count = useSelector((state) => state.cart.cartItems);
     const cartTotalAmount = useSelector((state) => state.cart.cartTotalAmount);
 
+    console.log(cartTotalAmount);
+
   return (
     <section id="cart">
       <Navbar />
@@ -78,7 +80,7 @@ export default function Cart(props) {
                                 <img style={{width:"50px", height:'50px'}} src={d.img} alt='' />
                                 <div style={{ display:"flex", flexDirection:"column" }}>
                                     <h5 id="cart-pro-name">  {d.name} </h5>
-                                    <h6 id="cart-pro-price">  Rs. {d.price}  </h6>
+                                    <h6 id="cart-pro-price">  Rs. { d.price }  </h6>
                                     <Box sx={{ display:{ xs:'block', sm: 'block', md:'none' } }}>
                                         <h6> Quantity </h6>
                                         <div>
@@ -113,7 +115,7 @@ export default function Cart(props) {
                     </Grid>
                     <Grid item xs={5} md={3}>
                         <div style={{textAlign:"end"}}>
-                            <h5> Rs.{ (d.price)*(d.cartQuantity) } </h5>
+                            <h5> Rs.{ d.price * (d.cartQuantity) } </h5>
                         </div>
                     </Grid>
                     <hr />

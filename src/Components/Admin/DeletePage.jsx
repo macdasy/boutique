@@ -9,6 +9,8 @@ import axios from 'axios';
 import './Admin.css';
 import { Button } from '@mui/material';
 import Swal from 'sweetalert2';
+import { Grid } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export default function DeletePage(props) {
 
@@ -19,6 +21,7 @@ export default function DeletePage(props) {
 
 
     const [data, setData] = useState();
+
     async function processData() {
       const res = await fetch("https://boutique-scpw.onrender.com/user/products");
       const data = await res.json();
@@ -32,23 +35,22 @@ export default function DeletePage(props) {
 
     const deleteItem = (e) => {
         const id= e.target.id;
-        const sltdEle = document.getElementById(id);
-        const p = document.querySelector(`p#${id}`);
-        console.log(sltdEle);
+        // const sltdEle = document.getElementById("list"+id);
+        // const p = document.querySelector(id);
+        // console.log(sltdEle);
 
         if( !items.includes(id)) {
-          sltdEle.style.background = '#fcadab';
-          p.innerHTML = 'Cancel';
-          setItems( (old) => [...old, id] );
+          // sltdEle.style.background = '#fcadab';
+          // p.innerHTML = 'Cancel';
+          if( id !== '' ) setItems( (old) => [...old, id] );
         } else { 
-          p.innerHTML = 'Delete';
-          sltdEle.style.background = 'white';
+          // p.innerHTML = 'Delete';
+          // sltdEle.style.background = 'white';
           setItems( items.filter(item => item !== id) );
         }
     }
 
     const sumbit = (e) => {
-
       Swal.fire({
         title: 'Do you want to save the changes?',
         showDenyButton: true,
@@ -59,11 +61,12 @@ export default function DeletePage(props) {
         if (result.isConfirmed) {
 
           const headers = {
-            'content-type': 'multipart/form-data',
+            // 'content-type': 'multipart/form-data',
             'Authorization': localStorage.getItem('token')
           }
 
           const postData = { id: items }
+          console.log(postData);
 
           axios.post("https://boutique-scpw.onrender.com/admin/delete", postData, {
               headers: headers
@@ -89,34 +92,39 @@ export default function DeletePage(props) {
         <section id='DeletePage'>
 
             <List dense={dense}>
-              {data.map((d, index) => (
+              {data === undefined ? (
+                <Grid item xs={12} md={12} style={{ textAlign: "center" }}>
+                    <CircularProgress style={{ color: "gold" }} />
+                </Grid>
+              ) : ( data.map((d, index) => (
                 <ListItem
                     style={{ padding:'1% 2%' }}
-                    id={d.id}
+                    id={"list"+d._id}
                     secondaryAction={
                         <>
                           <button id={d.id} className='itemBtn' onClick={deleteItem}> 
-                            <p style={{ padding:'2%', fontSize:'15px' }}  id={d.id} > Delete </p> 
+                            <p style={{ padding:'2%', fontSize:'15px' }}  id={d._id} > Delete </p> 
                           </button>
                         </>
                     }
                 >
                   <ListItemAvatar>
                     <Avatar>
-                      <FolderIcon />
+                      <img src={`data:img/png;base64,${d.imgUrl}`} alt='' />
                     </Avatar>
                   </ListItemAvatar>
                   <ListItemText
-                    primary="Single-line item"
+                    primary={d.category}
                     secondary={secondary ? 'Secondary text' : null}
                   />
                 </ListItem>
-              ))}
+              ))
+              )}
             </List>
 
             { items.length !== 0 &&
               <div style={{ display:'flex', justifyContent:'end', marginTop:'3%' }}>
-                  <Button> Cancel </Button>
+                  <Button onClick={()=>{setItems([])}}> Cancel </Button>
                   <Button onClick={sumbit}> Confirm </Button>
               </div>
             }

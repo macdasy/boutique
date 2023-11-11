@@ -6,15 +6,20 @@ export default function RPay(props) {
 
     const cartItems = useSelector((state) => state.cart.cartItems);
     const itemIDs = [];
-
+  
     cartItems.forEach(element => {
-        for(let i=0; i<element.cartQuantity; i++) itemIDs.push(element.id);
+        for(let i=0; i<element.cartQuantity; i++){ 
+          console.log(element);
+          const singleItem = { productID: element.id, size: element.size }
+          itemIDs.push(singleItem);
+        }
     });    
 
-    console.log(itemIDs);
-
     const paymentHandler = async (e) => {
-        const API_URL = 'https://boutique-scpw.onrender.com/user/'
+
+      console.log(itemIDs);
+
+      const API_URL = 'https://boutique-scpw.onrender.com/user/'
         e.preventDefault();
 
         const orderUrl = `${API_URL}checkout`;
@@ -22,7 +27,7 @@ export default function RPay(props) {
             method: 'post',
             url: orderUrl,
             data: {
-              "productId":itemIDs
+              "checkoutArray":itemIDs
             }
         });
         const { data } = response;

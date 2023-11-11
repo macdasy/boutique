@@ -13,7 +13,7 @@ import Contact from '../Components/Contact/Contact';
 import Extras from '../Components/Extras/Extras';
 import BuyNow from '../Components/BuyNow/BuyNow';
 import Shop from '../Components/Shop/Shop';
-import Policy from '../Components/Extras/Policy';
+// import Policy from '../Components/Extras/Policy';
 import { useSelector } from 'react-redux';
 // import { useEffect, useState } from 'react';
 import "react-toastify/dist/ReactToastify.css";
